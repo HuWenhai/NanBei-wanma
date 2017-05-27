@@ -1,0 +1,157 @@
+.pay{
+    position: relative;
+}
+.rightSec div.rightTit{
+    height: 14px;
+    line-height: 14px;
+    padding-left: 17px;padding-right: 20px;
+    margin-top: 2px;
+    border-left: 3px solid #1B53B2;
+    position: absolute;
+    left:0;
+}
+.rightSec div.rightTit>#payAdd{
+    display: inline-block;
+    float: right;
+    font-weight: normal;
+    font-size: 12px;
+    cursor: pointer;
+}
+.rightSec div.rightTit>#payAdd>img{
+    position: relative;
+    top:2px;
+}
+
+
+/*==================付款凭证===================*/
+.billItem{
+    width: 100%;min-height: 132px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.billItem>.billList{
+    width: 100%;line-height: 36px;
+    background: #E5EAF4;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.billItem>.billList>li{
+    width: auto;
+    font-size: 12px;
+    color: #323232;
+    line-height: 36px;
+    float: left;
+}
+.billItem>.billList>li:nth-child(1){
+    font-weight: bold;
+}
+.billItem>.billList>li:nth-child(3){
+    margin-left: 20px;
+}
+.billItem>.billList>li:nth-child(5){
+    margin-left: 360px;
+}
+.billItem>.listUl{
+    width: 100%;
+    min-height: 120px;
+    padding-left: 20px;padding-top: 20px;
+    overflow: hidden;
+}
+.billItem>.listUl>li{
+    width: auto;min-height: 120px;
+    line-height: 80px;
+    float: left;
+}
+.billItem>.listUl>li>img{
+    display: inline-block;
+    margin-left: 20px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+}
+.billItem>.listUl>li>img:first-child{ margin-left: 0}
+.billItem>.listUl>li:last-child{float: right}
+.billItem>.listUl>li>a{
+    font-size: 12px;
+    color: #01358F;
+    line-height: 12px;
+}
+/*======================付款确认=========================*/
+.payList{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 36px;
+}
+.listHd{
+    width: 100%;height: 40px;
+    background: #EFEFEF;
+    border-top: 1px solid #666666;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.listHd>li{
+    width: auto;
+    line-height: 40px;
+    float: left;
+    font-size: 12px;
+    color: #646464;
+}
+.listHd>li:first-child{
+    margin-left: 30px;
+}
+.listHd>li:nth-child(2){
+    margin-left: 65px;
+}
+.listHd>li:nth-child(3){
+    margin-left: 53px;
+}
+.listHd>li:nth-child(4){
+    margin-left: 300px;
+}
+.listHd>li:nth-child(5){
+    margin-left: 210px;
+}
+
+.listItem{
+    width: 100%;min-height: 52px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.listItem.fir{
+    border-top:1px solid #e4e4e4;
+}
+.listItem>li{
+    float: left;
+    font-size: 12px;
+    color: #323232;
+    line-height: 52px;
+    overflow: hidden;
+}
+.listItem>li:last-child>span{
+    font-size: 12px;
+    color: #01358F;
+    cursor: pointer;
+    font-weight: bold;
+}
+.listItem.sel{
+    height: 74px;
+}
+.listItem.sel>li:last-child{
+    line-height: 20px;
+    padding-top: 18px;
+}
+.listItem>li:nth-child(1){
+    width: 113px;
+    margin-left: 30px;
+}
+.listItem>li:nth-child(2){
+    width: 80px;
+}
+.listItem>li:nth-child(3){
+    width: 347px;
+    margin-left: 20px;
+}
+.listItem>li:nth-child(4){
+    width: 260px;
+}

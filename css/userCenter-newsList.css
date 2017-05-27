@@ -1,0 +1,55 @@
+.rightTit{
+    border-bottom: 1px solid #333333;
+}
+.list{
+    position: relative;
+}
+.rightTit>span{
+    border-bottom: 2px solid #333333;
+}
+.rightSec div.rightTit>div{
+    width: 3px;height: 14px;
+    background: #1B53B2;
+    position: absolute;
+    left:0;
+}
+
+.listItem{
+    width: 100%;height: auto;
+    overflow: hidden;
+}
+.listItem>li{
+    width: 100%;height: 112px;
+    border-bottom: 1px solid #e4e4e4;
+    padding:20px 15px 20px;
+    cursor: pointer;
+}
+.listItem>li:hover{
+    background: #EBF0F9;
+}
+.listItem>li>div{
+    width: 100%;
+    line-height: 14px;
+}
+.listItem>li>div>span{
+    font-size: 14px;
+    color: #323232;
+    line-height: 14px;
+    display: inline-block;
+    float: left;
+}
+.listItem>li>div>label{
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    color: #999999;
+    line-height: 14px;
+}
+.listItem>li>p{
+    width: 100%;
+    font-size: 12px;
+    color: #999999;
+    line-height: 16px;
+    display: inline-block;
+    margin-top: 20px;
+}

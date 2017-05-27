@@ -1,0 +1,25 @@
+nav{
+    height: 42px;
+    background: #E6F0FB;
+    border: 1px solid rgba(169,199,238,0.80);
+    border-radius: 2px;
+    margin-top: 20px;
+    padding-left: 20px;padding-right: 20px;
+}
+nav>span{
+    display: inline-block;
+    line-height: 42px;
+    font-size: 12px;
+    color: #323232;
+    float: left;
+}
+nav>span.plp{
+    cursor: pointer;
+}
+nav>span.back{
+    float: right;
+    cursor: pointer;
+}
+nav>span.spl{
+    font-size: 18px;
+}
