@@ -13,6 +13,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 input,button,select,textarea{
 	outline: none;
 }
+input,select{
+	/*将默认的select选择框样式清除*/
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+}
 body{
 	line-height:1;overflow-x: hidden;
 }
@@ -21,7 +27,7 @@ ol,ul{
 }
 table{
 	border-collapse:collapse;
-	border-spacing:0;
+	/*border-spacing:0;*/
 }
 textarea{
 	resize:none;
@@ -44,7 +50,7 @@ i{
 	font-family: '微软雅黑',Arial;
      font-weight:normal;
      font-style:normal;
-     font-size: 16px;
+     font-size: 12px;
  }
 *:before, *:after{
 	box-sizing:border-box;
