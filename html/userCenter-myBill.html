@@ -25,7 +25,15 @@
                 <span>购物车</span>
             </button>
             <div class="perName">
-                <span>万马金控集团供应链...</span><img src="../res/header/slideDown.png" alt="">
+                <div>
+                    <div class="manage">
+                        <span>万马金控集团供应链...</span><img src="../res/header/slideDown.png" alt="">
+                    </div>
+                    <ul>
+                        <li>账号管理</li>
+                        <li>退出</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -68,7 +76,7 @@
                     <li><img src="../res/navLeft/payment-p.png" alt=""><span>付款凭证</span></li>
                     <li><img src="../res/navLeft/payment-y.png" alt=""><span>付款确认</span></li>
                     <li><img src="../res/navLeft/myInvoice.png" alt=""><span>我的发票</span></li>
-                    <li><img src="../res/navLeft/mthRecon.png" alt=""><span>月度对账</span></li>
+                    <li class="dis"><img src="../res/navLeft/mthRecon.png" alt=""><span>月度对账</span></li>
                     <li><span style="margin-left: 34px">业务对账</span></li>
                     <li><span style="margin-left: 34px">财务对账</span></li>
                 </ul>
@@ -261,6 +269,7 @@
         </div>
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
     <script>
         $(document).ready(function () {
             $('.billItem').find('.listUl a:last-child').on('click',function () {

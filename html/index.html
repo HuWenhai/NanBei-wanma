@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>万马供应链管理客户订单系统首页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="hd">
+            <img src="../res/header/logo.png" alt="" width="338" height="38">
+            <div class="search">
+                <input type="text">
+                <button>搜索</button>
+            </div>
+            <button class="shopCar">
+                <img src="../res/header/shop-icon.png" alt="" width="14" height="14">
+                <span>购物车</span>
+            </button>
+            <div class="perName">
+                <div>
+                    <div class="manage">
+                        <span>万马金控集团供应链...</span><img src="../res/header/slideDown.png" alt="">
+                    </div>
+                    <ul>
+                        <li>账号管理</li>
+                        <li>退出</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="select">
+        <div class="conditionSel">
+            <!--所有分类-->
+            <div class="allClassify">
+                <span>所有分类：</span>
+                <ul>
+                    <li>
+                        <span>全部</span>
+                        <!--<label for="">中国大陆</label>-->
+                        <!--<span>×</span>-->
+                    </li>
+                </ul>
+            </div>
+
+            <!--品牌-->
+            <div class="brand">
+                <span>品牌：</span>
+                <ul>
+                    <li>伊利</li>
+                    <li>君乐宝</li>
+                    <li>雀巢</li>
+                    <li>蒙牛</li>
+                    <li>雅士利</li>
+                    <li>贝因美</li>
+                    <li>美赞臣/Mead Johnson</li>
+                    <li>合生元/BIOSTIME</li>
+                    <li>美素佳儿/Friso</li>
+                    <li>雅培/Abbott</li>
+                </ul>
+
+                <button class="more">
+                    <span>更多</span><img src="../res/header/slideDown.png" alt="">
+                </button>
+                <button>多选</button>
+            </div>
+
+            <!--试用阶段-->
+            <div class="shiYong">
+                <span>试用阶段：</span>
+                <ul>
+                    <li>一段</li>
+                    <li>二段</li>
+                    <li>三段</li>
+                    <li>四段</li>
+                    <li>五段</li>
+                    <li>全阶段</li>
+                    <li>1-10岁</li>
+                    <li>9-18个月</li>
+                    <li>Pre</li>
+                    <li>成长1+</li>
+                    <li>成长2+</li>
+                </ul>
+
+                <button class="more">
+                    <span>更多</span><img src="../res/header/slideDown.png" alt="">
+                </button>
+                <button>多选</button>
+            </div>
+
+            <!--产地-->
+            <div class="place" style="height: auto">
+                <span>产地：</span>
+                <ul class="placeCountry">
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>中国大陆</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>中国香港</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>中国澳门</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>日本</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>法国</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>荷兰</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>美国</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>澳大利亚</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>新西兰</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>加拿大</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>俄罗斯</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>韩国</span>
+                    </li>
+                    <li>
+                        <img src="../res/login/remb-none.png" alt=""><span>印度</span>
+                    </li>
+                </ul>
+
+                <button class="more">
+                    <span>收起</span><img src="../res/header/slideUp.png" alt="">
+                </button>
+                <button class="" style="margin-top: 12px">多选</button>
+
+                <div style="width: 0px;height: 0px;clear: both"></div>
+
+                <div class="btnSel">
+                    <button class="sub">提交</button>
+                    <button class="can">取消</button>
+                </div>
+            </div>
+        </div>
+
+        <!--查询-->
+        <div class="other">
+            <span>奶粉种类：</span>
+            <input type="text" class="otherIpt" value="1" readonly>
+            <ul class="otherUl" id="list-1">
+                <li>1</li>
+                <li>1</li>
+            </ul>
+
+            <span>适用对象：</span>
+            <input type="text" class="otherIpt" value="2" readonly>
+            <ul class="otherUl" id="list-2">
+                <li>2</li>
+                <li>2</li>
+            </ul>
+
+            <span>包装种类：</span>
+            <input type="text" class="otherIpt" value="纸盒包装" readonly>
+            <ul class="otherUl" id="list-3" >
+                <li>3</li>
+                <li>3</li>
+            </ul>
+
+            <button>
+                <img src="../res/smIcon/search-w.png" alt="">
+                <span>查询</span>
+            </button>
+        </div>
+    </section>
+
+    <ul class="secNav">
+        <li><span>综合排序</span></li>
+        <li><span>价格</span><img src="../res/smIcon/ascend.png" alt=""></li>
+        <li><span>供应量</span><img src="../res/smIcon/descend.png" alt=""></li>
+        <li><span>发货地</span><img src="../res/smIcon/addrDown.png" alt=""></li>
+        <li>
+            <span>价格区间</span>
+            <input type="text" value="￥">-<input type="text" value="￥">
+        </li>
+        <div style="width: 0px;height: 0px;clear: both"></div>
+        <ul class="otherUl" id="list-4" >
+            <li>上海</li>
+            <li>南京</li>
+            <li>杭州</li>
+        </ul>
+    </ul>
+
+    <!--商品内容-->
+    <section id="shopSev">
+        <ul>
+            <!--li作为固定位置的骨架-->
+            <li>
+                <!--具体的商品信息 .shopSec类-->
+                <div class="shopSec">
+                    <img src="../res/index/shop-1.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <!--加入购物车按钮-->
+                    <button class="shop-Y">
+                        <img src="../res/smIcon/shopCar-tra.png" alt="">
+                        <span>加入购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-2.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-N">
+                        <img src="../res/smIcon/shopCar-red.png" alt="">
+                        <span>移除购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="../res/index/shop-N.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-3.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-Y">
+                        <img src="../res/smIcon/shopCar-tra.png" alt="">
+                        <span>加入购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-4.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-Y">
+                        <img src="../res/smIcon/shopCar-tra.png" alt="">
+                        <span>加入购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-1.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-Y">
+                        <img src="../res/smIcon/shopCar-tra.png" alt="">
+                        <span>加入购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-2.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-N">
+                        <img src="../res/smIcon/shopCar-red.png" alt="">
+                        <span>移除购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="../res/index/shop-N.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-3.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-N">
+                        <img src="../res/smIcon/shopCar-red.png" alt="">
+                        <span>移除购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="../res/index/shop-N.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="shopSec">
+                    <img src="../res/index/shop-4.png" alt="" width="215" height="215">
+                    <div>
+                        <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                        <p>
+                            新西兰可瑞康Aptamil爱他美3段
+                            婴幼儿奶粉  澳洲直邮保税区...
+                        </p>
+                        <label>月成交量：</label><label>5.87万</label>
+                    </div>
+                    <span>厦门市思明...</span>
+                    <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/tel.png" alt="">
+                    <button class="shop-N">
+                        <img src="../res/smIcon/shopCar-red.png" alt="">
+                        <span>移除购物车</span>
+                    </button>
+                    <img class="shopCar-img" src="../res/index/shop-N.png" alt="">
+                </div>
+            </li>
+        </ul>
+
+        <!--下面页面跳转-->
+        <div class="sBtn">
+            <button id="btnRel" ><img src="../res/index/Right.png" alt="" width="7" height="10"></button>
+            <button class="nowBtn btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <span>···</span>
+            <button id="btnAdd"><img src="../res/index/Left.png" alt="" width="7" height="10"></button>
+
+            <span>共 100 页，到第</span>
+            <input type="text" value="2">
+            <span>页</span>
+
+            <button>确定</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ft">
+            增值电信业务经营许可证： 浙B2-202382137946 网络文化经营许可证：浙网文[2015]0295-021313号 12318举报
+            互联网药品信息服务资质证书编号：浙-（经营性）-2017-0005 浙公网安备 3301002131302000120号 <br>
+            © 2003-2017 xxxxxxxx 版权所有
+        </div>
+    </footer>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            //条件筛选
+            $('button.more').on('click',function () {
+                var span = $(this).find('span');
+                var text = span.text();
+                var img = $(this).find('img');
+                var src = img.attr('src');
+                var _div = $(this).parent();
+                if (text == '更多'){
+                    span.text(function () {
+                        return '收起';
+                    });
+                    img.attr('src','../res/header/slideUp.png');
+                    _div.css({
+                        'height':'auto'
+                    });
+                }else{
+                    span.text(function () {
+                        return '更多';
+                    });
+                    img.attr('src','../res/header/slideDown.png');
+                    _div.css({
+                        'height':'40px'
+                    });
+                }
+            });
+            $('.place').find('.placeCountry>li').on('click',function () {
+                var img = $(this).find('img');
+                var src = img.attr('src');
+                if (src == '../res/login/remb-none.png'){
+                    img.attr('src','../res/login/remb-ok.png');
+                }else{
+                    img.attr('src','../res/login/remb-none.png');
+                }
+            });
+
+            //奶粉种类筛选设置
+            $('.other').find('input.otherIpt').on('click',function () {
+                var i = $(this).index();
+                console.log(i);
+                $(this).siblings('.otherUl').show();
+            });
+
+            //商品加入和移除购物车
+            $('.shopSec').find('button').on('click',function () {
+                var self= $(this);
+                var img_1 = self.find('img');
+                var img_2 = self.siblings('img.shopCar-img');
+                var span = self.find('span');
+                var text = span.text();
+                if (text == '加入购物车'){
+                    img_1.attr('src','../res/smIcon/shopCar-red.png');
+                    img_2.attr('src','../res/index/shop-N.png');
+                    span.text(function () {
+                        return '移除购物车';
+                    });
+                    self.removeClass('shop-Y').addClass('shop-N');
+                }else{
+                    img_1.attr('src','../res/smIcon/shopCar-tra.png');
+                    img_2.attr('src','');
+                    span.text(function () {
+                        return '加入购物车';
+                    });
+                    self.removeClass('shop-N').addClass('shop-Y');
+                }
+            });
+
+            //按钮效果
+            $('.sBtn').find('.btn').on('click',function () {
+                $(this).addClass('nowBtn').siblings().removeClass('nowBtn');
+            });
+        });
+    </script>
+</body>
+</html>
