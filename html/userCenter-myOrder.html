@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>用户中心-我的提单</title>
+    <title>用户中心-我的订单</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
-    <link rel="stylesheet" href="../css/userCenter-myBill.css">
+    <link rel="stylesheet" href="../css/userCenter-myOrder.css ">
     <!--[if lt IE 9]>
     <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
@@ -55,7 +55,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="shopSev">
         <!--列表导航-->
         <div class="leftNav">
             <div class="nav-sec">
@@ -66,8 +66,8 @@
                 <ul>
                     <li><img src="../res/navLeft/shopIcon.png" alt=""><span>购物车</span></li>
                     <li><img src="../res/navLeft/myFocus.png" alt=""><span>我的关注</span></li>
-                    <li><img src="../res/navLeft/myOrder.png" alt=""><span>我的订单</span></li>
-                    <li class="active"><img src="../res/navLeft/myBill.png" alt=""><span>我的提单</span></li>
+                    <li class="active"><img src="../res/navLeft/myOrder.png" alt=""><span>我的订单</span></li>
+                    <li><img src="../res/navLeft/myBill.png" alt=""><span>我的提单</span></li>
                 </ul>
             </div>
             <div class="nav-sec">
@@ -90,172 +90,185 @@
             </div>
         </div>
 
-        <!--右侧内容-我的提单-->
         <div class="rightSec">
-            <div class="myBill">
+            <!--订单情况-->
+            <div class="orderDel">
                 <div class="rightTit">
-                    <span>我的提单</span>
+                    <span>订单情况</span>
                 </div>
 
-                <ul class="billThd">
-                    <li>关联订单号</li>
-                    <li>提货人信息</li>
-                    <li>备注</li>
+                <ul class="orderDel-thd">
+                    <li><span>全部订单</span> <label for="">8</label></li>
+                    <li class="order-active"><span>未付款订单</span> <label for="">6</label></li>
+                    <li><span>付款未提订单</span> <label for="">7</label></li>
+                    <li><span>付款已提订单</span> <label for="">8</label></li>
+                    <li><span>已完结订单</span> <label for="">8</label></li>
+                </ul>
+                <ul class="order-tbd">
+                    <li>商品</li>
+                    <li>支付方式</li>
+                    <li>提货方式</li>
+                    <li>成交金额</li>
+                    <li>收货人姓名</li>
+                    <li>联系方式</li>
+                    <li>地址</li>
                     <li>操作</li>
                 </ul>
 
-                <div class="billItem">
-                    <ul class="billList">
+                <div class="orderList">
+                    <ul class="listTop">
                         <li>订单编号：</li>
                         <li>131312312313</li>
-                        <li>2017-4-15</li>
+                        <li> 2017-4-15</li>
                         <li>预计交货日期：</li>
                         <li>2017-4-20</li>
                     </ul>
-                    <ul class="listUl">
-                        <li>2313231323</li>
-                        <li>王三，330106199901020066，13888888888，浙A 888888</li>
+                    <ul class="listSec">
                         <li>
-                            备注信息备注信息备注信息
-                            备注信息备注信息备注信息
-                            备注信息备注信息
+                            德运澳洲进口全脂成人
+                            儿童青少年奶粉
+                        </li>
+                        <li>款到发货</li>
+                        <li>送货上门</li>
+                        <li>￥200000</li>
+                        <li>王三</li>
+                        <li>13888888888</li>
+                        <li>
+                            浙江省杭州市体育场路105号凯
+                            喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="billDel.html">查看详情</a><br>
-                            <a href="javascript:void (0);">删除提单</a>
+                            <a href="orderDel.html">查看详情</a><br>
+                            <a href="">去付款</a><br>
+                            <a href="userCenter-myBill.html">去提单</a><br>
+                            <a href="logisticsInfo.html">查看物流</a><br>
+                            <a href="">确认收货</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="billItem">
-                    <ul class="billList">
+                <div class="orderList">
+                    <ul class="listTop">
                         <li>订单编号：</li>
                         <li>131312312313</li>
-                        <li>2017-4-15</li>
+                        <li> 2017-4-15</li>
                         <li>预计交货日期：</li>
                         <li>2017-4-20</li>
                     </ul>
-                    <ul class="listUl">
-                        <li>2313231323</li>
-                        <li>王三，330106199901020066，13888888888，浙A 888888</li>
+                    <ul class="listSec">
                         <li>
-                            备注信息备注信息备注信息
-                            备注信息备注信息备注信息
-                            备注信息备注信息
+                            德运澳洲进口全脂成人
+                            儿童青少年奶粉
+                        </li>
+                        <li>款到发货</li>
+                        <li>送货上门</li>
+                        <li>￥200000</li>
+                        <li>王三</li>
+                        <li>13888888888</li>
+                        <li>
+                            浙江省杭州市体育场路105号凯
+                            喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="billDel.html">查看详情</a><br>
-                            <a href="javascript:void (0);">删除提单</a>
+                            <a href="orderDel.html">查看详情</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="billItem">
-                    <ul class="billList">
+                <div class="orderList">
+                    <ul class="listTop">
                         <li>订单编号：</li>
                         <li>131312312313</li>
-                        <li>2017-4-15</li>
+                        <li> 2017-4-15</li>
                         <li>预计交货日期：</li>
                         <li>2017-4-20</li>
                     </ul>
-                    <ul class="listUl">
-                        <li>2313231323</li>
-                        <li>王三，330106199901020066，13888888888，浙A 888888</li>
+                    <ul class="listSec">
                         <li>
-                            备注信息备注信息备注信息
-                            备注信息备注信息备注信息
-                            备注信息备注信息
+                            德运澳洲进口全脂成人
+                            儿童青少年奶粉
+                        </li>
+                        <li>款到发货</li>
+                        <li>送货上门</li>
+                        <li>￥200000</li>
+                        <li>王三</li>
+                        <li>13888888888</li>
+                        <li>
+                            浙江省杭州市体育场路105号凯
+                            喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="billDel.html">查看详情</a><br>
-                            <a href="javascript:void (0);">删除提单</a>
+                            <a href="orderDel.html">查看详情</a><br>
+                            <a href="">去付款</a><br>
+                            <a href="userCenter-myBill.html">去提单</a><br>
+                            <a href="logisticsInfo.html">查看物流</a><br>
+                            <a href="">确认收货</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="billItem">
-                    <ul class="billList">
+                <div class="orderList">
+                    <ul class="listTop">
                         <li>订单编号：</li>
                         <li>131312312313</li>
-                        <li>2017-4-15</li>
+                        <li> 2017-4-15</li>
                         <li>预计交货日期：</li>
                         <li>2017-4-20</li>
                     </ul>
-                    <ul class="listUl">
-                        <li>2313231323</li>
-                        <li>王三，330106199901020066，13888888888，浙A 888888</li>
+                    <ul class="listSec">
                         <li>
-                            备注信息备注信息备注信息
-                            备注信息备注信息备注信息
-                            备注信息备注信息
+                            德运澳洲进口全脂成人
+                            儿童青少年奶粉
+                        </li>
+                        <li>款到发货</li>
+                        <li>送货上门</li>
+                        <li>￥200000</li>
+                        <li>王三</li>
+                        <li>13888888888</li>
+                        <li>
+                            浙江省杭州市体育场路105号凯
+                            喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="billDel.html">查看详情</a><br>
-                            <a href="javascript:void (0);">删除提单</a>
+                            <a href="orderDel.html">查看详情</a><br>
+                            <a href="">去付款</a><br>
+                            <a href="userCenter-myBill.html">去提单</a><br>
+                            <a href="logisticsInfo.html">查看物流</a><br>
+                            <a href="">确认收货</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="billItem">
-                    <ul class="billList">
+                <div class="orderList">
+                    <ul class="listTop">
                         <li>订单编号：</li>
                         <li>131312312313</li>
-                        <li>2017-4-15</li>
+                        <li> 2017-4-15</li>
                         <li>预计交货日期：</li>
                         <li>2017-4-20</li>
                     </ul>
-                    <ul class="listUl">
-                        <li>2313231323</li>
-                        <li>王三，330106199901020066，13888888888，浙A 888888</li>
+                    <ul class="listSec">
                         <li>
-                            备注信息备注信息备注信息
-                            备注信息备注信息备注信息
-                            备注信息备注信息
+                            德运澳洲进口全脂成人
+                            儿童青少年奶粉
+                        </li>
+                        <li>款到发货</li>
+                        <li>送货上门</li>
+                        <li>￥200000</li>
+                        <li>王三</li>
+                        <li>13888888888</li>
+                        <li>
+                            浙江省杭州市体育场路105号凯
+                            喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="billDel.html">查看详情</a><br>
-                            <a href="javascript:void (0);">删除提单</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="billItem">
-                    <ul class="billList">
-                        <li>订单编号：</li>
-                        <li>131312312313</li>
-                        <li>2017-4-15</li>
-                        <li>预计交货日期：</li>
-                        <li>2017-4-20</li>
-                    </ul>
-                    <ul class="listUl">
-                        <li>2313231323</li>
-                        <li>王三，330106199901020066，13888888888，浙A 888888</li>
-                        <li>
-                            备注信息备注信息备注信息
-                            备注信息备注信息备注信息
-                            备注信息备注信息
-                        </li>
-                        <li>
-                            <a href="billDel.html">查看详情</a><br>
-                            <a href="javascript:void (0);">删除提单</a>
+                            <a href="orderDel.html">查看详情</a><br>
+                            <a href="">去付款</a><br>
+                            <a href="userCenter-myBill.html">去提单</a><br>
+                            <a href="logisticsInfo.html">查看物流</a><br>
+                            <a href="">确认收货</a>
                         </li>
                     </ul>
-                </div>
-
-                <!--页数跳转-->
-                <div class="sBtn">
-                    <button id="btnRel" >上一页</button>
-                    <button class="btnSel btn">1</button>
-                    <button class="btn">2</button>
-                    <button class="btn">3</button>
-                    <span>···</span>
-                    <button id="btnAdd">下一页</button>
-
-                    <span>共 100 页，到第</span>
-                    <input type="text" value="2">
-                    <span>页</span>
-
-                    <button>确定</button>
                 </div>
             </div>
         </div>
@@ -272,14 +285,9 @@
     <script src="../js/common.js"></script>
     <script>
         $(document).ready(function () {
-            $('.billItem').find('.listUl a:last-child').on('click',function () {
-                $(this).parents('.billItem').remove();
+            $('.orderDel-thd').find('li').on('click',function () {
+                $(this).addClass('order-active').siblings().removeClass('order-active');
             });
-
-            $('.sBtn').find('.btn').on('click',function () {
-                $(this).addClass('btnSel').siblings().removeClass('btnSel');
-            });
-
         });
     </script>
 </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>万马供应链管理客户订单系统首页</title>
+    <title>搜索无结果</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
     <link rel="stylesheet" href="../css/index.css">
@@ -12,6 +12,46 @@
     <!--[if lt IE 9]>
     <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
+
+    <style>
+        .search-none{
+            width: 1200px;height: 100px;
+            margin: 20px auto 20px;
+            background: #FFFFFF;
+            padding-top: 20px;
+        }
+        .search-none>div{
+            width: 440px;
+            height: auto;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+        .search-none>div>img{
+            display: inline-block;
+            float: left;
+        }
+        .search-none>div>span{
+            display: inline-block;
+            float: left;
+            font-size: 14px;
+            margin-top: 20px;margin-left: 10px;
+        }
+
+        /*商品推荐*/
+        #shopSev{
+            width: 1200px;height: auto;
+            background: #FFFFFF;
+        }
+        #shopSev>.rightTit{
+            width: 100%;
+            padding-left: 20px;padding-top: 20px;
+            line-height: 20px;
+        }
+        #shopSev>.rightTit>span{
+            font-size: 14px;
+            font-weight:bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -147,7 +187,7 @@
                 <button class="more">
                     <span>收起</span><img src="../res/header/slideUp.png" alt="">
                 </button>
-                <button class="" style="margin-top: 8px">多选</button>
+                <button class="" style="margin-top: 12px">多选</button>
 
                 <div style="width: 0px;height: 0px;clear: both"></div>
 
@@ -194,7 +234,6 @@
         </div>
     </section>
 
-    <!--综合排序-->
     <ul class="secNav">
         <li style="cursor: default;"><span>综合排序</span></li>
         <li><span>价格</span><img src="../res/smIcon/ascend.png" alt=""></li>
@@ -214,8 +253,19 @@
         <div style="width: 0px;height: 0px;clear: both"></div>
     </ul>
 
-    <!--商品内容-->
+    <!--搜索无结果-->
+    <div class="search-none">
+        <div>
+            <img src="../res/index/search-none.png" alt="">
+            <span>对不起没有您要找的商品，您可以重新输入关键词。</span>
+        </div>
+    </div>
+
+    <!--商品推荐-->
     <section id="shopSev">
+        <div class="rightTit">
+            <span>商品推荐</span>
+        </div>
         <ul>
             <!--li作为固定位置的骨架-->
             <li>
@@ -390,22 +440,6 @@
                 </div>
             </li>
         </ul>
-
-        <!--下面页面跳转-->
-        <div class="sBtn">
-            <button id="btnRel" ><img src="../res/index/Right.png" alt="" width="7" height="10"></button>
-            <button class="nowBtn btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <span>···</span>
-            <button id="btnAdd"><img src="../res/index/Left.png" alt="" width="7" height="10"></button>
-
-            <span>共 100 页，到第</span>
-            <input type="text" value="2">
-            <span>页</span>
-
-            <button>确定</button>
-        </div>
     </section>
 
     <footer>
@@ -417,9 +451,9 @@
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/common.js"></script>
-    <script src="../js/contact.js"></script>
     <script src="../js/echarts.js"></script>
     <script src="../js/line.js"></script>
+    <script src="../js/contact.js"></script>
     <script>
         $(document).ready(function () {
             //条件选择
@@ -434,8 +468,6 @@
                     $(this).remove();
                 });
             });
-
-
             //条件筛选
             $('button.more').on('click',function () {
                 var span = $(this).find('span');
@@ -494,31 +526,31 @@
 
             //发货地效果
             $('.secNav').find('li:nth-child(4)').hover(function () {
-                var list = $(this).find('#list-4');
-                list.show();
+                    var list = $(this).find('#list-4');
+                    list.show();
 
-                var img = $(this).find('img');
-                var src = img.attr('src');
-                var span = $(this).find('span');
+                    var img = $(this).find('img');
+                    var src = img.attr('src');
+                    var span = $(this).find('span');
 
-                if (src == '../res/smIcon/addrDown.png'){
-                    img.attr('src','../res/smIcon/addrUp.png');
-                }else{
-                    img.attr('src','../res/smIcon/addrDown.png');
-                }
+                    if (src == '../res/smIcon/addrDown.png'){
+                        img.attr('src','../res/smIcon/addrUp.png');
+                    }else{
+                        img.attr('src','../res/smIcon/addrDown.png');
+                    }
 
-                list.find('li').on('click',function () {
-                    var _text = $(this).text();
-                    span.text(function () {
-                        return _text;
+                    list.find('li').on('click',function () {
+                        var _text = $(this).text();
+                        span.text(function () {
+                            return _text;
+                        });
+                        $(this).parent().hide();
                     });
-                    $(this).parent().hide();
+                },
+                function () {
+                    var list = $(this).find('#list-4');
+                    list.hide();
                 });
-            },
-            function () {
-                var list = $(this).find('#list-4');
-                list.hide();
-            });
 
             //商品加入和移除购物车
             $('.shopSec').find('button').on('click',function () {
@@ -542,11 +574,6 @@
                     });
                     self.removeClass('shop-N').addClass('shop-Y');
                 }
-            });
-
-            //按钮效果
-            $('.sBtn').find('.btn').on('click',function () {
-                $(this).addClass('nowBtn').siblings().removeClass('nowBtn');
             });
         });
     </script>

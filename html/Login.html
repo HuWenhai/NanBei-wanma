@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,10 +24,10 @@
             background-image: url("../res/login/logo.png");
             background-repeat: no-repeat;
             background-size: 338px 38px;
-            margin: 15% auto 40px;
+            margin: 10% auto 40px;
         }
         .login{
-            width: 400px;height: 374px;
+            width: 400px;height: 354px;
             background: #FFFFFF;
             border-radius: 2px;
             margin: 0px auto;
@@ -79,6 +79,9 @@
             font-size: 12px;
             cursor: pointer;
         }
+        .login>span#change:hover{
+            color: #01358F;
+        }
         .login>span:first-child{
             color: #01358F;
         }
@@ -126,16 +129,18 @@
             <input type="password" placeholder="********" class="wrong">
             <div class="show">密码错误</div>
 
-            <input id="yzm" type="text" placeholder="验证码"><img id="yzm-img" src="../res/login/yzm.png" alt=""><span>换一张</span>
-            <div style="margin-top: -5px;margin-bottom: 5px">验证码错误</div>
+            <input id="yzm" type="text" placeholder="验证码" class="wright"><img id="yzm-img" src="../res/login/yzm.png" alt="">
+            <span id="change">换一张</span>
+            <div class="hide" style="margin-top: -5px;margin-bottom: 5px">验证码错误</div>
 
             <img id="pass" class="pas" src="../res/login/remb-none.png" alt=""><span class="pas">记住密码</span>
-            <button>登 录</button>
+            <button id="checkIn">登 录</button>
         </div>
     </section>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script>
         $(document).ready(function () {
+            //记住密码效果
             $('.pas').on('click',function () {
                 var img = $('#pass');
                 var src = img.attr('src');
@@ -144,6 +149,11 @@
                 }else{
                     img.attr('src','../res/login/remb-none.png');
                 }
+            });
+
+            //登录密码验证
+            $('#checkIn').on('click',function () {
+                location.href = 'index.html';
             });
         });
     </script>

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>用户中心-月度对账</title>
+    <title>用户中心-财务对账</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
+    <link rel="stylesheet" href="../css/userCenter-mthRec.css">
     <!--[if lt IE 9]>
     <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
@@ -95,25 +96,190 @@
                     <span>财务对账</span>
                 </div>
 
+                <!--上方图表-->
                 <div class="topPho">
-
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="main" style="width: 100%;height:350px"></div>
                 </div>
 
+                <!--订单号搜索-->
+                <div class="listSearch">
+                    <div class="left">
+                        <span>月累计订单金额：</span><span>￥</span><label for="">200000.00</label>
+                    </div>
+                    <div class="right">
+                        <input type="text"><button>搜索</button>
+                    </div>
+                </div>
+
+                <!--订单列表-->
                 <div class="bottomList">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>开票金额：￥</span><label for="" style="margin-right: 40px">6000.00</label>
+                                <span>未开票金额：￥</span><label for="">1400.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票日期：</span><label for="">2017-4-20</label>
+                            </div>
+                            <div class="right">
+                                <a href="">查开发票</a>
+                            </div>
+                        </li>
                     </ul>
 
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>开票金额：￥</span><label for="" style="margin-right: 40px">6000.00</label>
+                                <span>未开票金额：￥</span><label for="">1400.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票日期：</span><label for="">2017-4-20</label>
+                            </div>
+                            <div class="right">
+                                <a href="">查开发票</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>开票金额：￥</span><label for="" style="margin-right: 40px">6000.00</label>
+                                <span>未开票金额：￥</span><label for="">1400.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票日期：</span><label for="">2017-4-20</label>
+                            </div>
+                            <div class="right">
+                                <a href="">查开发票</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>开票金额：￥</span><label for="" style="margin-right: 40px">6000.00</label>
+                                <span>未开票金额：￥</span><label for="">1400.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票日期：</span><label for="">2017-4-20</label>
+                            </div>
+                            <div class="right">
+                                <a href="">查开发票</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>开票金额：￥</span><label for="" style="margin-right: 40px">6000.00</label>
+                                <span>未开票金额：￥</span><label for="">1400.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票日期：</span><label for="">2017-4-20</label>
+                            </div>
+                            <div class="right">
+                                <a href="">查开发票</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>开票金额：￥</span><label for="" style="margin-right: 40px">6000.00</label>
+                                <span>未开票金额：￥</span><label for="">1400.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>开票日期：</span><label for="">2017-4-20</label>
+                            </div>
+                            <div class="right">
+                                <a href="">查开发票</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -145,12 +311,106 @@
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/pie.js"></script>
     <script>
         $(document).ready(function () {
             $('.sBtn').find('.btn').on('click',function () {
                 $(this).addClass('btnSel').siblings().removeClass('btnSel');
             });
         });
+
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie' // 使用圆环图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+
+                var option = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b}"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['未开发票','已开发票']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {
+                                show: true,
+                                type: ['pie'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'center',
+                                        max: 1548
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'财务对账',
+                            type:'pie',
+                            radius : ['50%', '70%'],//此地的50%和70%为环形大小
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        show : false
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                },
+                                emphasis : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        textStyle : {
+                                            fontSize : '30',
+                                            fontWeight : 'bold'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[
+                                {value:1200, name:'未开发票',
+                                    itemStyle:{
+                                        normal:{color:'#D99982'}
+                                }},
+                                {value:1000, name:'已开发票',
+                                    itemStyle:{
+                                        normal:{color:'#9DCEB8'}
+                                }}
+                            ]
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
     </script>
 </body>
 </html>

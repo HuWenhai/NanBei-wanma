@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
     <link rel="stylesheet" href="../css/userCenter-index.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <!--[if lt IE 9]>
     <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
@@ -54,7 +55,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="shopSev">
         <!--列表导航-->
         <div class="leftNav">
             <div class="nav-sec">
@@ -95,7 +96,7 @@
             <div class="newMsg">
                 <div class="rightTit">
                     <span>最新消息</span>
-                    <a href="">查看更多</a>
+                    <a href="userCenter-newsList.html">查看更多</a>
                 </div>
                 <ul>
                     <li>
@@ -170,10 +171,10 @@
                             喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="">查看详情</a><br>
+                            <a href="orderDel.html">查看详情</a><br>
                             <a href="">去付款</a><br>
-                            <a href="">去提单</a><br>
-                            <a href="">查看物流</a><br>
+                            <a href="userCenter-myBill.html">去提单</a><br>
+                            <a href="logisticsInfo.html">查看物流</a><br>
                             <a href="">确认收货</a>
                         </li>
                     </ul>
@@ -202,7 +203,7 @@
                             喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="">查看详情</a>
+                            <a href="orderDel.html">查看详情</a>
                         </li>
                     </ul>
                 </div>
@@ -230,10 +231,10 @@
                             喜雅大厦301D室
                         </li>
                         <li>
-                            <a href="">查看详情</a><br>
+                            <a href="orderDel.html">查看详情</a><br>
                             <a href="">去付款</a><br>
-                            <a href="">去提单</a><br>
-                            <a href="">查看物流</a><br>
+                            <a href="userCenter-myBill.html">去提单</a><br>
+                            <a href="logisticsInfo.html">查看物流</a><br>
                             <a href="">确认收货</a>
                         </li>
                     </ul>
@@ -242,7 +243,14 @@
 
             <!--走势分析-->
             <div class="trendAna">
+                <div class="rightTit">
+                    <span>走势分析</span>
+                </div>
 
+                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="line" style="width: 460px;height:320px;border: 1px solid #DDDDDD;float: left;margin-top: 10px"></div>
+                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main" style="width: 460px;height:320px;border: 1px solid #DDDDDD;float: right;margin-top: 10px"></div>
             </div>
 
             <!--商品推荐-->
@@ -252,12 +260,12 @@
                 </div>
 
                 <ul class="brandList">
-                    <li class="listSec">
+                    <li class="listSec pic " style="display: block">
                         <ul>
-                            <li class="brand-l">
+                            <li class="brand-l shopSec imgCon">
                                 <img src="../res/userCenter-index/brand-1.png" alt="" width="180" height="180">
                                 <div>
-                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <span>￥</span><span>1111.00</span><img src="../res/smIcon/shopTrend.png" alt="">
                                     <p>
                                         新西兰可瑞康Aptamil爱他美3段
                                         婴幼儿奶粉  澳洲直邮保税区...
@@ -265,10 +273,10 @@
                                     <label>月成交量：</label><label>5.87万</label>
                                 </div>
                                 <span>厦门市思明...</span>
-                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
-                            ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                                <img class="i" src="../res/smIcon/qq-c.png" alt=""><img class="i" src="../res/smIcon/weixin-c.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel-c.png" alt=""><img class="i" src="../res/smIcon/email-c.png" alt="">
                             </li>
-                            <li class="brand-l">
+                            <li class="brand-l shopSec imgCon">
                                 <img src="../res/userCenter-index/brand-2.png" alt="" width="180" height="180">
                                 <div>
                                     <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
@@ -279,10 +287,10 @@
                                     <label>月成交量：</label><label for="">5.87万</label>
                                 </div>
                                 <span>厦门市思明...</span>
-                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                                <img class="i" src="../res/smIcon/qq-c.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
                             ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
                             </li>
-                            <li class="brand-l">
+                            <li class="brand-l shopSec imgCon">
                                 <img src="../res/userCenter-index/brand-3.png" alt="" width="180" height="180">
                                 <div>
                                     <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
@@ -293,10 +301,10 @@
                                     <label>月成交量：</label><label for="">5.87万</label>
                                 </div>
                                 <span>厦门市思明...</span>
-                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin-c.png" alt=""
                             ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
                             </li>
-                            <li class="brand-l">
+                            <li class="brand-l shopSec imgCon">
                                 <img src="../res/userCenter-index/brand-4.png" alt="" width="180" height="180">
                                 <div>
                                     <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
@@ -308,14 +316,132 @@
                                 </div>
                                 <span>厦门市思明...</span>
                                 <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
-                            ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            ><img class="i" src="../res/smIcon/tel-c.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
                             </li>
                         </ul>
                     </li>
 
-                    <li class="listSec"></li>
+                    <li class="listSec pic">
+                        <ul>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-1.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2222.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label>5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq-c.png" alt=""><img class="i" src="../res/smIcon/weixin-c.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel-c.png" alt=""><img class="i" src="../res/smIcon/email-c.png" alt="">
+                            </li>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-2.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label for="">5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq-c.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            </li>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-3.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label for="">5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin-c.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            </li>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-4.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label for="">5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel-c.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            </li>
+                        </ul>
+                    </li>
 
-                    <li class="listSec"></li>
+                    <li class="listSec pic">
+                        <ul>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-1.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>3333.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label>5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq-c.png" alt=""><img class="i" src="../res/smIcon/weixin-c.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel-c.png" alt=""><img class="i" src="../res/smIcon/email-c.png" alt="">
+                            </li>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-2.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label for="">5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq-c.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            </li>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-3.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label for="">5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin-c.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            </li>
+                            <li class="brand-l shopSec imgCon">
+                                <img src="../res/userCenter-index/brand-4.png" alt="" width="180" height="180">
+                                <div>
+                                    <span>￥</span><span>2250.00</span><img src="../res/smIcon/shopTrend.png" alt="">
+                                    <p>
+                                        新西兰可瑞康Aptamil爱他美3段
+                                        婴幼儿奶粉  澳洲直邮保税区...
+                                    </p>
+                                    <label>月成交量：</label><label for="">5.87万</label>
+                                </div>
+                                <span>厦门市思明...</span>
+                                <img class="i" src="../res/smIcon/qq.png" alt=""><img class="i" src="../res/smIcon/weixin.png" alt=""
+                            ><img class="i" src="../res/smIcon/tel-c.png" alt=""><img class="i" src="../res/smIcon/email.png" alt="">
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <ul class="brandNum">
@@ -336,5 +462,209 @@
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/pie.js"></script>
+    <script src="../js/line.js"></script>
+    <script src="../js/contact.js"></script>
+    <script>
+         //路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie',
+                'echarts/chart/line' // 使用圆环图就加载pie模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+                var myLine = ec.init(document.getElementById('line'));
+
+                //订单购买走势图--折线图
+                var opt = {
+                    title : {
+                        text: '过去半年订单购买走势图'
+                    },
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {show: true, type: ['line']},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            boundaryGap : false,
+                            data : ['1','2','3','4','5','6']  //X轴月份
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value',
+                            axisLabel : {
+                                formatter: '{value}'   //Y轴数值
+                            }
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'订单购买量',
+                            type:'line',
+                            data:[110, 141, 150, 313, 120, 113, 100],  //Y轴具体数值（6个值）
+                            itemStyle : {
+                                normal : {
+                                    color:'#6FA2F5',
+                                    lineStyle:{
+                                        color:'#6FA2F5'
+                                    }
+                                }
+                            },
+                            markPoint : {
+                                data : [
+                                    {type : 'max', name: '最大值',itemStyle:{ normal:{color:'#6FA2F5'}}},
+                                    {type : 'min', name: '最小值',itemStyle:{ normal:{color:'#6FA2F5'}}}
+                                ]
+                            },
+                            markLine : {
+                                data : [
+                                    {type : 'average', name: '平均值',itemStyle:{ normal:{color:'#6FA2F5'}}}
+                                ]
+                            }
+                        }
+                    ]
+                };
+                //订单购买走势图--环形图
+                var option = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['1月','2月','3月','4月','5月','6月']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {
+                                show: true,
+                                type: ['pie'],
+                                option: {
+                                    funnel: {
+                                        x: '30%',
+                                        width: '60%',
+                                        funnelAlign: 'center',
+                                        max: 1548
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'过去半年订单购买月份占比',
+                            type:'pie',
+                            radius : ['50.50%'],
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        show : false
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                },
+                                emphasis : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        textStyle : {
+                                            fontSize : '18',
+                                            fontWeight : 'bold',
+                                            color : '#646464',
+                                            background : '#F7C190'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[{
+                                name:'1月',  //此地value为假数据，需替换值
+                                value:111,
+                                itemStyle:{
+                                    normal:{color:'#F7C190'}
+                                }
+                            },{
+                                name:'2月',
+                                value:111,
+                                itemStyle:{
+                                    normal:{color:'#CE5D59'}
+                                }
+                            },{
+                                name:'3月',
+                                value:111,
+                                itemStyle:{
+                                    normal:{color:'#D99982'}
+                                }
+                            },{
+                                name:'4月',
+                                value:111,
+                                itemStyle:{
+                                    normal:{color:'#74ACB3'}
+                                }
+                            },{
+                                name:'5月',
+                                value:111,
+                                itemStyle:{
+                                    normal:{color:'#485B69'}
+                                }
+                            },{
+                                name:'6月',
+                                value:111,
+                                itemStyle:{
+                                    normal:{color:'#9DCEB8'}
+                                }
+                            }]
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+                myLine.setOption(opt);
+            }
+        );
+
+        $(document).ready(function () {
+            $('.brandNum').find('li').on('click',function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                var i = $(this).index();
+                var pic = $('.listSec.pic');
+                pic.eq(i).show().siblings().hide();
+            });
+
+            $('.orderDel-thd').find('li').on('click',function () {
+                $(this).addClass('order-active').siblings().removeClass('order-active');
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
+    <link rel="stylesheet" href="../css/goodsDel.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="hd">
+            <img src="../res/header/logo.png" alt="" width="338" height="38">
+            <div class="search">
+                <input type="text">
+                <button>搜索</button>
+            </div>
+            <button class="shopCar">
+                <img src="../res/header/shop-icon.png" alt="" width="14" height="14">
+                <span>购物车</span>
+            </button>
+            <div class="perName">
+                <div>
+                    <div class="manage">
+                        <span>万马金控集团供应链...</span><img src="../res/header/slideDown.png" alt="">
+                    </div>
+                    <ul>
+                        <li>账号管理</li>
+                        <li>退出</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--商品信息-->
+    <section id="goods-1">
+        <div class="nav">
+            <span>万马集团首页</span><span> > </span><span>婴幼儿奶粉</span><span> > </span><span class="l">君乐宝奶粉</span>
+        </div>
+        <!--左侧图片及信息-->
+        <div class="goodsLeft">
+            <!--商品图片-->
+            <div class="goodsPic">
+                <div id="imgLG">
+                    <img src="../res/goods/delImgLg-1.png" alt="">
+                </div>
+
+                <ul class="imgList">
+                    <li class="img-c " id="imgLeft">
+                        <img src="../res/index/Right.png" alt="">
+                    </li>
+
+                    <li class="goods-img active"><img src="../res/goods/delImg-1.png" alt=""></li>
+                    <li class="goods-img"><img src="../res/goods/delImg-2.png" alt=""></li>
+                    <li class="goods-img"><img src="../res/goods/delImg-3.png" alt=""></li>
+                    <li class="goods-img"><img src="../res/goods/delImg-4.png" alt=""></li>
+
+                    <li class="img-c" id="imgRight">
+                        <img src="../res/index/Left.png" alt="">
+                    </li>
+                </ul>
+
+                <div class="imgCol">
+                    <img src="../res/goods/Collect-n.png" alt=""><span>加入收藏（</span><label>9999</label><span>人气）</span><br>
+                    <!--<img src="../res/goods/Collect-y.png" alt=""><span>加入收藏（</span><label>9999</label><span>人气）</span>-->
+                </div>
+            </div>
+
+            <!--奶粉信息选择-->
+            <div class="goodsMsg">
+                <span>德国澳洲进口全脂成人儿童青少年学生高钙奶粉1kg</span><br>
+                <span class="msg-span2">新效期 好口感 有效期截止17年11月底</span>
+                <div class="imgCon">
+                    <span>价格：</span><span class="msg">￥ 250.00</span>
+                    <img class="shop-qushi" src="../res/smIcon/shopTrend.png" alt=""><br><br>
+                    <span style="color: #999999">产品编码号：</span><span style="color: #999999">123456789</span>
+                    <div id="shopNum">
+                        <span >起购量</span><span> >100 </span>
+                    </div>
+                </div>
+                
+                <table id="goods-tab" cellpadding="0">
+                    <tr>
+                        <td style="width: 80px;font-size: 14px;color: #999999">包装种类：</td>
+                        <td><input type="text" value="袋装" class="ipt-active" readonly></td>
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                    </tr>
+                    <tr class="shopTr">
+                        <td>适用阶段：</td>
+                        <td><input type="text" value="一段" class="ipt ipt-active" readonly></td>
+                        <td><input type="text" value="二段" class="ipt" readonly></td>
+                        <td><input type="text" value="三段" class="ipt" readonly></td>
+                    </tr>
+                    <tr class="shopTr">
+                        <td>提货方式：</td>
+                        <td><input type="text" value="自提" class="ipt" readonly></td>
+                        <td colspan="2" style="text-align: left;padding-left: 8px">
+                            <input type="text" value="送货上门" class="ipt ipt-active" style="width: 90px" readonly>
+                        </td>
+                        <!--<td></td>-->
+                    </tr>
+                    <tr class="shopTr">
+                        <td style="letter-spacing: 4px;">发货地：</td>
+                        <td><input type="text" value="上海" class="ipt ipt-active" readonly></td>
+                        <td><input type="text" value="杭州" class="ipt" readonly></td>
+                        <td><input type="text" value="广州" class="ipt" readonly></td>
+                    </tr>
+                    <tr class="shopTr" style="border-bottom: 1px dashed #eeeeee">
+                        <td>产品仓库：</td>
+                        <td><input type="text" value="上海" class="ipt ipt-active" readonly></td>
+                        <td><input type="text" value="杭州" class="ipt" readonly></td>
+                        <td><input type="text" value="广州" class="ipt" readonly></td>
+                    </tr>
+                    <tr>
+                        <td style="letter-spacing: 10px;">运费：</td>
+                        <td>免运费</td>
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                    </tr>
+                    <tr>
+                        <td>库存状态：</td>
+                        <td colspan="2">
+                            <span>货源充足</span>/<span class="sel">库存紧张</span>/<span>缺货</span>
+                        </td>
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                    </tr>
+                </table>
+
+                <button id="shopGo">
+                    <img src="../res/smIcon/shopCar-tra.png" alt="">
+                    <span>加入购物车</span>
+                </button>
+            </div>
+        </div>
+
+        <!--右侧推荐-->
+        <div class="goodsRight">
+            <span>同类商品推荐</span>
+            <ul>
+                <li>
+                    <img src="../res/goods/shop-t1.png" alt="" width="140" height="140">
+                    <span>荷兰进口奶粉420g</span>
+                    <label for="">￥150.00</label>
+                </li>
+                <li>
+                    <img src="../res/goods/shop-t2.png" alt="" width="140" height="140">
+                    <span>雀巢婴儿配方奶粉400g</span>
+                    <label for="">￥150.00</label>
+                </li>
+                <li>
+                    <img src="../res/goods/shop-t3.png" alt="" width="140" height="140">
+                    <span>雀巢早产儿奶粉400g</span>
+                    <label for="">￥150.00</label>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--商品详情/联系业务员-->
+    <section id="goods-2">
+        <!--联系业务员-->
+        <div class="contact">
+            <span>CONTACT/联系我们</span>
+            <div class="con-img imgCon shopSec">
+                <!--业务员头像-->
+                <img src="../res/goods/yewu-women.png" alt="">
+                <span style="margin-left: 10px">业务员</span><label for="">张三</label><br>
+
+                <img src="../res/smIcon/qq-c.png" alt=""><img src="../res/smIcon/weixin-c.png" alt=""
+            ><img src="../res/smIcon/tel-c.png" alt=""><img src="../res/smIcon/email-c.png" alt="">
+            </div>
+
+            <div style="width: 0px;height: 0px;clear: both;"></div>
+            <ul class="time">
+                <li style="color: #666666;font-size: 14px">工作时间：</li>
+                <li>周一至周五：8:00-24:00</li>
+                <li>周六至周日：8:00-24:00</li>
+            </ul>
+        </div>
+
+        <!--业务员商品推荐-->
+        <div class="shop-t">
+            <span>业务员商品推荐</span>
+
+            <ul>
+                <li>
+                    <div class="imgCon shopSec">
+                        <img src="../res/goods/shop-t1.png" alt=""><span>￥500.00</span>
+                        <p>
+                            德国版原装进口奶粉APTAMIL艾特没婴幼儿奶粉白金版1段保税区...
+                        </p>
+                        <span>业务员</span><label for="">但丁</label>
+                        <img src="../res/smIcon/qq-c.png" alt=""><img src="../res/smIcon/weixin-c.png" alt=""
+                    ><img src="../res/smIcon/tel-c.png" alt=""><img src="../res/smIcon/email-c.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="imgCon shopSec">
+                        <img src="../res/goods/shop-t2.png" alt=""><span>￥500.00</span>
+                        <p>
+                            德国版原装进口奶粉APTAMIL艾特没婴幼儿奶粉白金版1段保税区...
+                        </p>
+                        <span>业务员</span><label for="">但丁</label>
+                        <img src="../res/smIcon/qq-c.png" alt=""><img src="../res/smIcon/weixin-c.png" alt=""
+                    ><img src="../res/smIcon/tel-c.png" alt=""><img src="../res/smIcon/email-c.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="imgCon shopSec">
+                        <img src="../res/goods/shop-t3.png" alt=""><span>￥500.00</span>
+                        <p>
+                            德国版原装进口奶粉APTAMIL艾特没婴幼儿奶粉白金版1段保税区...
+                        </p>
+                        <span>业务员</span><label for="">但丁</label>
+                        <img src="../res/smIcon/qq-c.png" alt=""><img src="../res/smIcon/weixin-c.png" alt=""
+                    ><img src="../res/smIcon/tel-c.png" alt=""><img src="../res/smIcon/email-c.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="imgCon shopSec">
+                        <img src="../res/goods/shop-t4.png" alt=""><span>￥500.00</span>
+                        <p>
+                            德国版原装进口奶粉APTAMIL艾特没婴幼儿奶粉白金版1段保税区...
+                        </p>
+                        <span>业务员</span><label for="">但丁</label>
+                        <img src="../res/smIcon/qq-c.png" alt=""><img src="../res/smIcon/weixin-c.png" alt=""
+                    ><img src="../res/smIcon/tel-c.png" alt=""><img src="../res/smIcon/email-c.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--商品详情-->
+        <div class="shopDel">
+            <div class="delNav">
+                <span>商品详情</span>
+            </div>
+            
+            <span>产品参数</span>
+            <table>
+                <tr>
+                    <td><span class="delSp">厂名：</span><label for="" class="delX">游侠公司</label></td>
+                    <td><span class="delSp">厂址：</span><label for="" class="delX">澳大利亚 Schubert</label></td>
+                    <td><span class="delSp">厂家联系方式：</span><label for="" class="delX">11111111111</label></td>
+                </tr>
+                <tr>
+                    <td><span class="delSp">保质期：</span><label for="" class="delX">365天</label></td>
+                    <td><span class="delSp">产品名称：</span><label for="" class="delX">全脂成人奶粉</label></td>
+                    <td><span class="delSp">净含量：</span><label for="" class="delX">500g</label></td>
+                </tr>
+                <tr>
+                    <td><span class="delSp">包装方式：</span><label for="" class="delX">袋装</label></td>
+                    <td><span class="delSp">品牌：</span><label for="" class="delX">德运</label></td>
+                    <td><span class="delSp">系列：</span><label for="" class="delX">全脂成人奶粉1KG</label></td>
+                </tr>
+                <tr>
+                    <td><span class="delSp">商品条形码：</span><label for="" class="delX">66666666666</label></td>
+                    <td><span class="delSp">产地：</span><label for="" class="delX">澳大利亚</label></td>
+                    <td><span class="delSp">适用对象：</span><label for="" class="delX">成人</label></td>
+                </tr>
+                <tr>
+                    <td><span class="delSp">奶粉种类：</span><label for="" class="delX">全脂 高钙</label></td>
+                </tr>
+            </table>
+            
+            <div class="delImg" style="margin-top: 10px">
+                <img src="../res/goods/delImg.png" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="ft">
+            增值电信业务经营许可证： 浙B2-202382137946 网络文化经营许可证：浙网文[2015]0295-021313号 12318举报
+            互联网药品信息服务资质证书编号：浙-（经营性）-2017-0005 浙公网安备 3301002131302000120号 <br>
+            © 2003-2017 xxxxxxxx 版权所有
+        </div>
+    </footer>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/line.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.goodsPic').find('.imgCol').on('click',function () {
+                var img = $(this).find("img");
+                var src = img.attr('src');
+                if (src == '../res/goods/Collect-n.png'){
+                    img.attr('src','../res/goods/Collect-y.png');
+                    $(this).find('span,label').css('color','#dd1e32');
+                }else{
+                    img.attr('src','../res/goods/Collect-n.png');
+                    $(this).find('span,label').css('color','#666666');
+                }
+            });
+            $('.goodsPic').find('.imgList>.goods-img').on('click',function () {
+                $(this).addClass('active').siblings().removeClass('active');
+
+                //点击详情小图切换大图
+                //var self_src = $(this).find('img').attr('src');
+                //$('.goodsPic').find('#imgLG>img').attr('src',self_src);
+            });
+            //商品详情图小图选择
+            (function ($) {
+                var i = 0;
+                function move() {
+                    i++;
+                    if (i = 4){ i = 0;}
+                    $('.goods-img').eq(i).addClass('active').siblings().removeClass('active');
+                }
+                function moveL() {
+                    i --;
+                    if (i = -1){ i = 3;}
+                    $('.goods-img').eq(i).addClass('active').siblings().removeClass('active');
+                }
+                $('#imgRight').click(function () {
+                    move();
+                });
+                $('#imgLeft').click(function () {
+                    moveL();
+                });
+            })(jQuery);
+
+            $('.shopTr').find('.ipt').on('click',function () {
+                var ipt = $(this).parent().siblings().find('.ipt');
+                $(this).addClass('ipt-active');
+                ipt.removeClass('ipt-active');
+            });
+
+            $('#shopGo').on('click',function () {
+                location.href = 'shopCar.html';
+            });
+        });
+    </script>
+</body>
+</html>

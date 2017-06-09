@@ -1,0 +1,79 @@
+.bottomList,
+.listUl{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+/*订单号搜索*/
+.listSearch{
+    width: 100%;height: 32px;
+    overflow: hidden;
+}
+.listSearch>.left{
+    float: left;
+
+}
+.listSearch>.left>span{
+    display: inline-block;
+    width: auto;line-height: 32px;
+}
+.listSearch>.left>label,
+.listSearch>.left>span:nth-child(2){
+    display: inline-block;
+    width: auto;
+    line-height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #DD1E32;
+}
+.listSearch>.right{
+    float: right;
+}
+.listSearch>.right>input{
+    width: 200px;height: 30px;
+     border: 1px solid #1C53B2;
+     border-radius: 1px;
+    padding-bottom: 5px;padding-top: 5px;padding-left: 10px;
+ }
+.listSearch>.right>button{
+    width: 58px;
+    height: 30px;
+    background: #1C53B2;
+    border-radius: 1px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+/*订单列表*/
+.listUl{
+    height: 114px;
+    margin-top: 20px;
+}
+.listUl>li{
+    width: 100%;
+    line-height: 28px;
+    overflow: hidden;
+    padding-left: 20px;padding-right: 20px;
+}
+.listUl>li:nth-child(1){
+    line-height: 36px;
+    background: #E5EAF4;
+    margin-bottom: 10px;
+}
+.listUl>li:nth-child(1)>span{
+    font-weight: bold;
+}
+
+.listUl>li>.left{
+    width: auto;
+    float: left;
+}
+.listUl>li>.right{
+    width: auto;
+    float: right;
+}
+.listUl>li>.right>a{
+    color: #1c53b2;
+}

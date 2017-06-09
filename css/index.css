@@ -10,20 +10,21 @@
     margin: 0px auto;
 }
 .conditionSel>div{
-    height: 40px;
+    min-height: 40px;
     /*border-bottom: 1px dashed #e4e4e4;*/
     overflow: hidden;
 }
 .conditionSel>div>button{
-    margin-top: 8px;
+    line-height: 22px;
+    margin-top: 7px;
     float: right;
 }
-.conditionSel>div>button:last-child{ margin-top: 11px}
+.conditionSel>div>button:last-child{ margin-top: 8px}
 .conditionSel>div button>img{
     margin-left: 5px;
 }
 .conditionSel>div button.more{
-    width: 68px;height: 26px;
+    width: 68px;
     background: #FFFFFF;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
@@ -48,6 +49,7 @@
 }
 .conditionSel>div>ul{
     /*height: 40px;*/
+    height: auto;
     margin-left: 35px;
     overflow: hidden;
 }
@@ -75,7 +77,8 @@
     overflow: hidden;
 }
 .btnSel>button{
-    width: 54px;height: 24px;
+    width: 54px;line-height: 24px;
+    /*padding-bottom: 6px;padding-top: 6px;*/
     border: 1px solid #DDDDDD;
     border-radius: 3px;
 }
@@ -95,6 +98,31 @@
 }
 
 /*所有分类*/
+.allClassify{
+    overflow: hidden;
+}
+.allClassify li{
+    min-width: 60px;
+}
+.allClassify input{
+    min-width: 40px;
+    padding: 5px;
+    background: url("../res/smIcon/close.png") right center no-repeat;
+    background-position-x: 120px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.allClassify input:hover{
+    color: #DD1E32;
+    border: 1px solid #DD1E32;
+}
+.allClassify>#search-g{
+    width: auto;
+    height:auto;
+    line-height: 42px;
+    float: right;
+    color: #666666;
+}
 
 /*产地*/
 .place>.placeCountry>li>img{
@@ -111,18 +139,23 @@
     margin: 20px auto 0;
     position: relative;
 }
-.other>span{
+.other>.checkIpt{
+    width: auto;height: auto;
+    float: left;margin-left: 40px;
+    position: relative;
+}
+.other>.checkIpt>span{
     line-height: 30px;
     display: inline-block;
     float: left;
     margin-left: 50px;
 }
-.other>span:nth-child(1){
+.other>.checkIpt>span:nth-child(1){
     margin-left: 0;
 }
-.other>input{
-    width: 180px;line-height: 30px;
-    background-color: #f8f8f8;
+.other>.checkIpt>input{
+    width: 180px;
+    padding-bottom: 7px;padding-top: 7px;
     border:1px solid #DDDDDD;
     display: inline-block;
     float: left;
@@ -136,10 +169,11 @@
     background: url("../res/header/slideDown.png") right center no-repeat;
     background-position-x: 160px;
 }
-.other>.otherUl{
+.other>.checkIpt>.otherUl{
     width: 178px;height: auto;
     position: absolute;
     top:31px;
+    left:81px;
     z-index: 2;
     background: #FFFFFF;
     display: none;
@@ -148,20 +182,14 @@
     -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.20);
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.20);
 }
-.other>.otherUl#list-1{
-    left:81px;
+.other>.checkIpt>.otherUl.show{
+    display: block;
 }
-.other>.otherUl#list-2{
-    left:391px;
-}
-.other>.otherUl#list-3{
-    left:701px;
-}
-.other>.otherUl>li{
+.other>.checkIpt>.otherUl>li{
     line-height: 30px;
     padding-left: 10px;
 }
-.other>.otherUl>li:hover{
+.other>.checkIpt>.otherUl>li:hover{
     background: #E3EAF6;
 }
 .other>button{
@@ -188,7 +216,7 @@
     position: relative;
 }
 .secNav>li{
-    min-width: 140px;
+    min-width: 140px;height: 14px;
     line-height: 14px;
     color: #333333;
     margin-top: 14px;
@@ -199,6 +227,9 @@
 .secNav>li:nth-child(5){
     padding-left: 40px;
     border: none;
+}
+.secNav>li:nth-child(4){
+    position: relative;
 }
 .secNav>li:hover{
     cursor: pointer;
@@ -214,7 +245,7 @@
     border:1px solid #e4e4e4;
     margin-left: 20px;margin-right: 20px;
 }
-.secNav>#list-4{
+.secNav #list-4{
     width: 140px;
     -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.20);
     -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.20);
@@ -222,16 +253,19 @@
     background: #FFFFFF;
 
     position: absolute;
-    top:30px;
-    left:420px;
+    top:14px;
+    left:0;
 
     display: none;
+    z-index: 2;
 }
-.secNav>#list-4>li{
+.secNav #list-4>li{
+    width: 140px;
+    height: 30px;
     line-height: 30px;
-    padding-left: 10px;
+    background: #FFFFFF;
 }
-.secNav>#list-4>li:hover{
+.secNav #list-4>li:hover{
     background: #E3EAF6;
 }
 
@@ -246,17 +280,17 @@
 }
 #shopSev>ul>li{
     width: 285px;
-    height: 392px;
+    height: 402px;
     float: left;
     margin-left: 18px;margin-top: 20px;
     background: #FFFFFF;
 }
 #shopSev>ul>li:nth-child(4n+1){
-    margin-left: 3px
+    margin-left: 2px
 }
 .shopSec{
     width: 285px;
-    height: 392px;
+    height: 400px;
     float: left;
     margin-left: 18px;
     padding: 20px;
@@ -265,7 +299,7 @@
 }
 .shopSec:nth-child(4n+1){ margin-left: 3px}
 .shopSec:hover{
-    height: 444px;
+    height: 454px;
     background: #FFFFFF;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.40);
     position: relative;
@@ -333,10 +367,12 @@
 }
 
 /*加入购物车和移除购物车的类*/
-.shop-Y{
+.shopSec .shop-Y{
     background: #DD1E32;
     color: #FFFFFF;
     border: 1px solid transparent;
+    display: inline-block;
+    margin-top: 15px;
 }
 .shopSec>img.shopCar-img{
     display: inline-block;
@@ -344,10 +380,12 @@
     top:0;
     right: -2px;
 }
-.shop-N{
+.shopSec .shop-N{
     background: #FFFFFF;
     color: #DD1E32;
     border: 1px solid #DD1E32;
+    display: inline-block;
+    margin-top: 15px;
 }
 
 /*下面页面跳转*/

@@ -241,12 +241,20 @@
 
     <!--附件-->
     <div class="fixed">
+
         <div class="box">
             <div class="close">
                 <span>附件详情</span><span id="closeT">×</span>
             </div>
+            <div class="turn" id="turn-l">
+                <img src="../res/index/Right.png" alt="">
+            </div>
             <img src="../res/payment/002.png" alt="">
+            <div class="turn" id="turn-r">
+                <img src="../res/index/Left.png" alt="">
+            </div>
         </div>
+
     </div>
 
     <footer>
@@ -265,6 +273,10 @@
             });
             $('#closeT').on('click',function () {
                 $('.fixed').hide();
+            });
+
+            $('.sBtn').find('.btn').on('click',function () {
+                $(this).addClass('btnSel').siblings().removeClass('btnSel');
             });
         });
     </script>

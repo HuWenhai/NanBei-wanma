@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>万马供应链管理客户订单系统首页</title>
+    <title>下单成功</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
     <link rel="stylesheet" href="../css/index.css">
@@ -12,6 +12,66 @@
     <!--[if lt IE 9]>
     <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
+    <style>
+        /*搜索无结果*/
+        .search-none{
+            width: 1200px;min-height: 204px;
+            margin: 20px auto 20px;
+            background: #FFFFFF;
+            padding-top: 30px;
+            overflow: hidden;
+        }
+        .search-none>img{
+            display: inline-block;
+            float: left;
+            margin-left: 30px;
+        }
+        .search-none>ul{
+            min-width:800px;height: auto;
+            display: inline-block;
+            float: left;
+            margin-left: 20px;margin-top: 5px;
+        }
+        .search-none>ul>li{
+            width: auto;line-height: 22px;
+            color: #333333;
+        }
+        .search-none>ul>li>span{ font-weight: bold}
+        .search-none>ul>li:nth-child(1){
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .search-none>ul>li:nth-child(5)>ul{
+            width: auto;height: auto;
+        }
+        .search-none>ul>li:nth-child(5)>ul>li{
+            width: auto;
+            text-align: left;
+            height: 16px;line-height: 16px;
+            float: left;
+            margin-left: 20px;
+        }
+        .search-none>ul>li:nth-child(5)>ul>li:nth-child(2n+1){
+            cursor: pointer;
+            color: #1b53b2;
+        }
+
+        /*商品推荐*/
+        #shopSev{
+            background: #FFFFFF;
+        }
+        #shopSev>.rightTit{
+            width: 100%;
+            padding-left: 20px;padding-top: 20px;
+            line-height: 20px;
+        }
+        #shopSev>.rightTit>span{
+            font-size: 14px;
+            font-weight:bold;
+
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -39,183 +99,37 @@
         </div>
     </header>
 
-    <section id="select">
-        <div class="conditionSel">
-            <!--所有分类-->
-            <div class="allClassify">
-                <span>所有分类：</span>
-                <ul>
-                    <li>
-                        <input type="text" value="全部" readonly>
-                    </li>
+    <div class="search-none">
+        <img src="../res/smIcon/shopSuccess.png" alt="">
+        <ul>
+            <li>恭喜您下单成功！</li>
+            <li>
+                <span>订单编号：</span><label for="">1234567890</label>
+                <span style="margin-left: 30px">预计交货日期：</span><label for="">2017-05-21</label>
+            </li>
+            <li>
+                送货上门
+            </li>
+            <li>
+                <span>货物寄送至：</span><label for="">浙江省杭州市体育场路111号 4445收</label>
+            </li>
+            <li id="order-q">
+                <ul style="margin-top: 5px">
+                    <li style="margin-left: 0">查看详情</li>
+                    <li>|</li>
+                    <li>去付款</li>
+                    <li>|</li>
+                    <li>去提单</li>
                 </ul>
-                <div id="search-g">
-                    <span>共</span><label for="">1</label><span>款相关产品</span>
-                </div>
-            </div>
+            </li>
+        </ul>
+    </div>
 
-            <!--品牌-->
-            <div class="brand selectLi">
-                <span>品牌：</span>
-                <ul>
-                    <li>伊利</li>
-                    <li>君乐宝</li>
-                    <li>雀巢</li>
-                    <li>蒙牛</li>
-                    <li>雅士利</li>
-                    <li>贝因美</li>
-                    <li>美赞臣/Mead Johnson</li>
-                    <li>合生元/BIOSTIME</li>
-                    <li>美素佳儿/Friso</li>
-                    <li>雅培/Abbott</li>
-                </ul>
-
-                <button class="more">
-                    <span>更多</span><img src="../res/header/slideDown.png" alt="">
-                </button>
-                <button>多选</button>
-            </div>
-
-            <!--试用阶段-->
-            <div class="shiYong selectLi">
-                <span>试用阶段：</span>
-                <ul>
-                    <li>一段</li>
-                    <li>二段</li>
-                    <li>三段</li>
-                    <li>四段</li>
-                    <li>五段</li>
-                    <li>全阶段</li>
-                    <li>1-10岁</li>
-                    <li>9-18个月</li>
-                    <li>Pre</li>
-                    <li>成长1+</li>
-                    <li>成长2+</li>
-                </ul>
-
-                <button class="more">
-                    <span>更多</span><img src="../res/header/slideDown.png" alt="">
-                </button>
-                <button>多选</button>
-            </div>
-
-            <!--产地-->
-            <div class="place" style="height: auto">
-                <span>产地：</span>
-                <ul class="placeCountry">
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>中国大陆</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>中国香港</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>中国澳门</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>日本</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>法国</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>荷兰</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>美国</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>澳大利亚</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>新西兰</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>加拿大</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>俄罗斯</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>韩国</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>印度</span>
-                    </li>
-                </ul>
-
-                <button class="more">
-                    <span>收起</span><img src="../res/header/slideUp.png" alt="">
-                </button>
-                <button class="" style="margin-top: 8px">多选</button>
-
-                <div style="width: 0px;height: 0px;clear: both"></div>
-
-                <div class="btnSel">
-                    <button class="sub">提交</button>
-                    <button class="can">取消</button>
-                </div>
-            </div>
-        </div>
-
-        <!--查询-->
-        <div class="other">
-            <div class="checkIpt" style="margin-left: 0">
-                <span>奶粉种类：</span>
-                <input type="text" class="otherIpt" value="1" readonly>
-                <ul class="otherUl" id="list-1">
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                </ul>
-            </div>
-            <div class="checkIpt">
-                <span>适用对象：</span>
-                <input type="text" class="otherIpt" value="2" readonly>
-                <ul class="otherUl" id="list-2">
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                </ul>
-            </div>
-            <div class="checkIpt">
-                <span>包装种类：</span>
-                <input type="text" class="otherIpt" value="纸盒包装" readonly>
-                <ul class="otherUl" id="list-3" >
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                </ul>
-            </div>
-            <button>
-                <img src="../res/smIcon/search-w.png" alt="">
-                <span>查询</span>
-            </button>
-        </div>
-    </section>
-
-    <!--综合排序-->
-    <ul class="secNav">
-        <li style="cursor: default;"><span>综合排序</span></li>
-        <li><span>价格</span><img src="../res/smIcon/ascend.png" alt=""></li>
-        <li><span>供应量</span><img src="../res/smIcon/descend.png" alt=""></li>
-        <li>
-            <span>发货地</span><img src="../res/smIcon/addrDown.png" alt="">
-            <ul class="otherUl" id="list-4">
-                <li>上海</li>
-                <li>南京</li>
-                <li>杭州</li>
-            </ul>
-        </li>
-        <li>
-            <span>价格区间</span>
-            <input type="text" value="￥">-<input type="text" value="￥">
-        </li>
-        <div style="width: 0px;height: 0px;clear: both"></div>
-    </ul>
-
-    <!--商品内容-->
+    <!--商品推荐-->
     <section id="shopSev">
+        <div class="rightTit">
+            <span>商品推荐</span>
+        </div>
         <ul>
             <!--li作为固定位置的骨架-->
             <li>
@@ -390,22 +304,6 @@
                 </div>
             </li>
         </ul>
-
-        <!--下面页面跳转-->
-        <div class="sBtn">
-            <button id="btnRel" ><img src="../res/index/Right.png" alt="" width="7" height="10"></button>
-            <button class="nowBtn btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <span>···</span>
-            <button id="btnAdd"><img src="../res/index/Left.png" alt="" width="7" height="10"></button>
-
-            <span>共 100 页，到第</span>
-            <input type="text" value="2">
-            <span>页</span>
-
-            <button>确定</button>
-        </div>
     </section>
 
     <footer>
@@ -417,107 +315,19 @@
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/common.js"></script>
-    <script src="../js/contact.js"></script>
     <script src="../js/echarts.js"></script>
     <script src="../js/line.js"></script>
+    <script src="../js/contact.js"></script>
     <script>
         $(document).ready(function () {
-            //条件选择
-            $('.selectLi').find('li').on('click',function () {
-                var self_text = $(this).text();
-                var all_cla = $('.allClassify').find('ul');
-                //var ipt = all_cla.find('input').val();
-                $('<li>' +
-                    '<input type="text" value="" readonly>' +
-                    '</li>').appendTo(all_cla).find('input').val(self_text);
-                $('.allClassify').find('li').on('click',function () {
-                    $(this).remove();
-                });
+            $('#order-q').find('li:nth-child(1)').on('click',function () {
+                location.href = 'orderDel.html';
             });
-
-
-            //条件筛选
-            $('button.more').on('click',function () {
-                var span = $(this).find('span');
-                var text = span.text();
-                var img = $(this).find('img');
-                var src = img.attr('src');
-                var _div = $(this).parent();
-                if (text == '更多'){
-                    span.text(function () {
-                        return '收起';
-                    });
-                    img.attr('src','../res/header/slideUp.png');
-                    _div.css({
-                        'height':'auto'
-                    });
-                }else{
-                    span.text(function () {
-                        return '更多';
-                    });
-                    img.attr('src','../res/header/slideDown.png');
-                    _div.css({
-                        'height':'40px'
-                    });
-                }
+            $('#order-q').find('li:nth-child(3)').on('click',function () {
+                location.href = 'userCenter-payment-y.html';
             });
-            $('.place').find('.placeCountry>li').on('click',function () {
-                var img = $(this).find('img');
-                var src = img.attr('src');
-                if (src == '../res/login/remb-none.png'){
-                    img.attr('src','../res/login/remb-ok.png');
-                }else{
-                    img.attr('src','../res/login/remb-none.png');
-                }
-            });
-
-            //奶粉种类筛选设置
-            $('.otherIpt').on('click',function () {
-                var input = $(this);
-                var ul = input.siblings('.otherUl');
-                var li = ul.find('li');
-                ul.show();
-
-                li.on('click',function () {
-                    var val = $(this).text();
-                    input.val(val);
-                    //ipt_val = val;
-                    ul.hide();
-                });
-
-                //阻止事件冒泡，为点击其他位置隐藏做准备
-                event.stopPropagation();
-                $('html,body').click(function () {
-                    ul.hide();
-                });
-            });
-
-            //发货地效果
-            $('.secNav').find('li:nth-child(4)').hover(function () {
-                var list = $(this).find('#list-4');
-                list.show();
-
-                var img = $(this).find('img');
-                var src = img.attr('src');
-                var span = $(this).find('span');
-
-                if (src == '../res/smIcon/addrDown.png'){
-                    img.attr('src','../res/smIcon/addrUp.png');
-                }else{
-                    img.attr('src','../res/smIcon/addrDown.png');
-                }
-
-                list.find('li').on('click',function () {
-                    var _text = $(this).text();
-                    span.text(function () {
-                        return _text;
-                    });
-                    $(this).parent().hide();
-                });
-            },
-            function () {
-                var list = $(this).find('#list-4');
-                list.hide();
+            $('#order-q').find('li:nth-child(5)').on('click',function () {
+                location.href = 'userCenter-myBill.html';
             });
 
             //商品加入和移除购物车
@@ -542,11 +352,6 @@
                     });
                     self.removeClass('shop-N').addClass('shop-Y');
                 }
-            });
-
-            //按钮效果
-            $('.sBtn').find('.btn').on('click',function () {
-                $(this).addClass('nowBtn').siblings().removeClass('nowBtn');
             });
         });
     </script>

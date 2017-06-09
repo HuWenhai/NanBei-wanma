@@ -46,12 +46,39 @@
     display: none;
 }
 .fixed>.box{
-    width: 800px;height: 600px;
+    width: 940px;height: 600px;
     margin: 70px auto;
     background: #FFFFFF;
     padding-left: 20px;padding-right: 20px;
     overflow: hidden;
     z-index: 3;
+}
+.fixed .turn{
+    width: 60px;height: 60px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+
+    margin-top: 220px;
+    float: left;margin-left: 10px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    padding-left: 25px;padding-top: 20px;
+}
+.fixed .turn:hover{
+    background: #f5f5f5;
+}
+.fixed #turn-l{
+    /*background: url("../res/index/Right.png") center no-repeat;*/
+    margin-left: 0;
+}
+/*.fixed #turn-r{*/
+    /*background: url("../res/index/Left.png") center no-repeat;*/
+/*}*/
+.fixed>.box>img{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
 }
 .fixed>.box>.close{
     width: 100%;line-height: 54px;

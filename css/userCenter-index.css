@@ -168,16 +168,28 @@
 
 /*==================商品推荐====================*/
 .brand{
-    width: auto;height: auto;
+    width: 980px;height: auto;
     overflow: hidden;
+    position: relative;
 }
 .brandList{
-    width: 100%;
+    width: auto;
+    position: relative;
     overflow: hidden;
 }
 .brandList>.listSec{
     width: 940px;
     float: left;
+    display: none;
+}
+.brandList>.listSec:nth-child(1){
+    left: 0;
+}
+.brandList>.listSec:nth-child(2){
+    left: 940px;
+}
+.brandList>.listSec:nth-child(3){
+    left: 1880px;
 }
 .brandList>.listSec>ul{
     width: 100%;height: 374px;

@@ -1,0 +1,67 @@
+/*商品推荐*/
+#shopSev{
+    width: 1200px;height: auto;
+    background: #FFFFFF;
+}
+#shopSev>.rightTit{
+    width: 100%;
+    padding-left: 20px;padding-top: 20px;
+    line-height: 20px;
+}
+#shopSev>.rightTit>span{
+    font-size: 14px;
+    font-weight:bold;
+
+}
+
+
+#logistics{
+    background: #FFFFFF;
+    margin-top: 80px;margin-bottom: 20px;
+    padding: 10px 20px;
+}
+#logistics>span{
+    line-height: 32px;
+}
+#logistics>table{
+    width: 100%;
+    padding-left: 20px;
+}
+
+#logistics>table td{
+    height: 30px;
+    vertical-align: middle;
+    position: relative;
+}
+#logistics>table.tab-1 td>span{
+    font-weight: bold;
+}
+
+#logistics>table.tab-2{
+    margin-left: 20px;
+    margin-top: 20px;margin-bottom: 10px;
+}
+#logistics>table.tab-2 td{
+    vertical-align: top;
+}
+#logistics>table.tab-2 td.active>span{
+    color: #1b53b2;
+}
+#logistics>table.tab-2 td:nth-child(1){
+    border-left: 1px solid #dfe1e5;
+    padding-left: 20px;
+}
+#logistics>table.tab-2 td:nth-child(1)>span{
+    font-weight: bold;
+}
+#logistics>table.tab-2 td>div.yuan{
+    width: 5px;height: 5px;
+    background: #dfe1e5;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+
+    position: absolute;
+    top:3px;
+    left:-3px;
+}

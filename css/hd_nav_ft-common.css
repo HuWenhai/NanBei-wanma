@@ -49,12 +49,15 @@ header>.hd>.search>button{
     letter-spacing: 6px;
     padding-left: 12px;
     position: relative;
-    padding-top: 0px;
     margin-left: -4px;
+}
+header>.hd>.search>button:hover{
+    background: #14469b;
 }
 /*购物车*/
 header>.hd>.shopCar{
     width: 120px;height: 36px;
+    line-height: 36px;
     background: #F7F7F7;
     border: 1px solid #DDDDDD;
     border-radius: 2px;

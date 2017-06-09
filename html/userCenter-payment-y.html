@@ -139,7 +139,7 @@
                         <li>￥200000</li>
                         <li>
                             <span>查看明细</span><br>
-                            <span>去确认</span>
+                            <span class="confirm">去确认</span>
                         </li>
                     </ul>
                     <ul class="listItem">
@@ -176,7 +176,7 @@
                         <li>￥200000</li>
                         <li>
                             <span>查看明细</span><br>
-                            <span>去确认</span>
+                            <span class="confirm">去确认</span>
                         </li>
                     </ul>
                     <ul class="listItem sel">
@@ -186,7 +186,7 @@
                         <li>￥200000</li>
                         <li>
                             <span>查看明细</span><br>
-                            <span>去确认</span>
+                            <span class="confirm">去确认</span>
                         </li>
                     </ul>
                     <ul class="listItem">
@@ -246,5 +246,16 @@
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sBtn').find('.btn').on('click',function () {
+                $(this).addClass('btnSel').siblings().removeClass('btnSel');
+            });
+
+            $('.confirm').on('click',function () {
+                location.href = 'userCenter-fenchai.html';
+            });
+        });
+    </script>
 </body>
 </html>

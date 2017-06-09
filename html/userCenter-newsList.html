@@ -188,5 +188,12 @@
     </footer>
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sBtn').find('.btn').on('click',function () {
+                $(this).addClass('btnSel').siblings().removeClass('btnSel');
+            });
+        });
+    </script>
 </body>
 </html>
