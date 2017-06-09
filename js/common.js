@@ -27,6 +27,9 @@
     });
 
     //页面跳转
+    $('header').find('.hd>img').on('click',function () {
+        location.href = 'index.html';
+    });
     $('.leftNav').find('.nav-sec:eq(0)').on('click',function () {
         location.href = 'userCenter-index.html';
     });
