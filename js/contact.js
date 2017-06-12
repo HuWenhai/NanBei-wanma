@@ -180,7 +180,6 @@
                 var l_2 = $(this).offset().left - 460;
                 var h = $(this).offset().top - 150;
                 var r = $(window).width() - $(this).offset().left ;
-                console.log(r);
                 if (r >= 480){
                     $('<div id="lineTrend"></div>').css({
                         left:l,

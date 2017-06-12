@@ -18,7 +18,7 @@
         <div class="hd">
             <img src="../res/header/logo.png" alt="" width="338" height="38">
             <div class="search">
-                <input type="text">
+                <input type="text" placeholder="请输入商品类名，订单号或提单号">
                 <button>搜索</button>
             </div>
             <button class="shopCar">
@@ -58,49 +58,63 @@
             <div class="brand selectLi">
                 <span>品牌：</span>
                 <ul>
-                    <li>伊利</li>
-                    <li>君乐宝</li>
-                    <li>雀巢</li>
-                    <li>蒙牛</li>
-                    <li>雅士利</li>
-                    <li>贝因美</li>
-                    <li>美赞臣/Mead Johnson</li>
-                    <li>合生元/BIOSTIME</li>
-                    <li>美素佳儿/Friso</li>
-                    <li>雅培/Abbott</li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>伊利</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>君乐宝</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>雀巢</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>蒙牛</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>雅士利</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>贝因美</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>美赞臣/Mead Johnson</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>合生元/BIOSTIME</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>美素佳儿/Friso</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>雅培/Abbott</span></li>
                 </ul>
 
                 <button class="more">
-                    <span>更多</span><img src="../res/header/slideDown.png" alt="">
+                    <span>收起</span><img src="../res/header/slideUp.png" alt="">
                 </button>
-                <button>多选</button>
+                <button class="moreBtn">多选</button>
+
+                <div style="width: 0px;height: 0px;clear: both"></div>
+
+                <div class="btnSel">
+                    <button class="sub">提交</button>
+                    <button class="can">取消</button>
+                </div>
             </div>
 
             <!--试用阶段-->
             <div class="shiYong selectLi">
                 <span>试用阶段：</span>
                 <ul>
-                    <li>一段</li>
-                    <li>二段</li>
-                    <li>三段</li>
-                    <li>四段</li>
-                    <li>五段</li>
-                    <li>全阶段</li>
-                    <li>1-10岁</li>
-                    <li>9-18个月</li>
-                    <li>Pre</li>
-                    <li>成长1+</li>
-                    <li>成长2+</li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>一段</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>二段</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>三段</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>四段</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>五段</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>全阶段</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>1-10岁</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>9-18个月</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>Pre</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>成长1+</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>成长2+</span></li>
                 </ul>
 
                 <button class="more">
-                    <span>更多</span><img src="../res/header/slideDown.png" alt="">
+                    <span>收起</span><img src="../res/header/slideUp.png" alt="">
                 </button>
-                <button>多选</button>
+                <button class="moreBtn">多选</button>
+
+                <div style="width: 0px;height: 0px;clear: both"></div>
+
+                <div class="btnSel">
+                    <button class="sub">提交</button>
+                    <button class="can">取消</button>
+                </div>
             </div>
 
             <!--产地-->
-            <div class="place" style="height: auto">
+            <div class="place selectLi" style="height: auto">
                 <span>产地：</span>
                 <ul class="placeCountry">
                     <li>
@@ -147,11 +161,11 @@
                 <button class="more">
                     <span>收起</span><img src="../res/header/slideUp.png" alt="">
                 </button>
-                <button class="" style="margin-top: 8px">多选</button>
+                <button class="moreBtn" style="margin-top: 8px">多选</button>
 
                 <div style="width: 0px;height: 0px;clear: both"></div>
 
-                <div class="btnSel">
+                <div class="btnSel" style="display: block">
                     <button class="sub">提交</button>
                     <button class="can">取消</button>
                 </div>
@@ -423,10 +437,11 @@
     <script>
         $(document).ready(function () {
             //条件选择
+            var cun = true;
             $('.selectLi').find('li').on('click',function () {
                 var self_text = $(this).text();
                 var all_cla = $('.allClassify').find('ul');
-                //var ipt = all_cla.find('input').val();
+                cun;
                 $('<li>' +
                     '<input type="text" value="" readonly>' +
                     '</li>').appendTo(all_cla).find('input').val(self_text);
@@ -435,6 +450,20 @@
                 });
             });
 
+            //
+            $('.moreBtn').on('click',function () {
+                cun = false;
+                var img = $(this).siblings('ul').find('img');
+                img.show();
+                $(this).siblings('.btnSel').show();
+                $('.selectLi').find('li').on('click',function () {
+                    return false
+                });
+            });
+            $('.btnSel').find('.can').on('click',function () {
+                $(this).parent().hide();
+                $(this).parent().siblings('ul').find('img').hide();
+            });
 
             //条件筛选
             $('button.more').on('click',function () {
@@ -461,7 +490,7 @@
                     });
                 }
             });
-            $('.place').find('.placeCountry>li').on('click',function () {
+            $('.conditionSel').find('ul>li').on('click',function () {
                 var img = $(this).find('img');
                 var src = img.attr('src');
                 if (src == '../res/login/remb-none.png'){
@@ -472,7 +501,7 @@
             });
 
             //奶粉种类筛选设置
-            $('.otherIpt').on('click',function () {
+            $('.otherIpt').on('click',function (e) {
                 var input = $(this);
                 var ul = input.siblings('.otherUl');
                 var li = ul.find('li');
@@ -486,11 +515,25 @@
                 });
 
                 //阻止事件冒泡，为点击其他位置隐藏做准备
-                event.stopPropagation();
+//                event.stopPropagation();
+//                event.stopImmediatePropagation();
+//                event.preventDefault();
+                stopEvent(e);
                 $('html,body').click(function () {
                     ul.hide();
                 });
             });
+            function stopEvent(event){ //阻止冒泡事件
+                //取消事件冒泡
+                var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+                if (e && e.stopPropagation) {
+                    // this code is for Mozilla and Opera
+                    e.stopPropagation();
+                } else if (window.event) {
+                    // this code is for IE
+                    window.event.cancelBubble = true;
+                }
+            }
 
             //发货地效果
             $('.secNav').find('li:nth-child(4)').hover(function () {

@@ -175,7 +175,7 @@
 .brandList{
     width: auto;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .brandList>.listSec{
     width: 940px;

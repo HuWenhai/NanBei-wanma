@@ -60,6 +60,14 @@
     margin-right: 40px;
     cursor: pointer;
 }
+.conditionSel>div>ul>li>img{
+    position: relative;
+    top:2px;
+    display: none;
+}
+.conditionSel>div>ul>li>span{
+    margin-left: 5px;
+}
 .allClassify,.place{
     width: 100%;
     min-height: 40px;line-height: 48px;
@@ -74,6 +82,7 @@
 .btnSel{
     width: 136px;height: auto;
     margin: 0px auto;
+    display: none;
     overflow: hidden;
 }
 .btnSel>button{
@@ -102,11 +111,15 @@
     overflow: hidden;
 }
 .allClassify li{
-    min-width: 60px;
+    width: auto;
 }
-.allClassify input{
-    min-width: 40px;
+.allClassify>ul>li input{
+    width: auto;
     padding: 5px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background: url("../res/smIcon/close.png") right center no-repeat;
     background-position-x: 120px;
     border: 1px solid transparent;
@@ -125,14 +138,10 @@
 }
 
 /*产地*/
-.place>.placeCountry>li>img{
-    position: relative;
-    top:2px;
+.conditionSel>.place>ul>li>img{
+    display: inline-block;
 }
-.place>.placeCountry>li>span{
-    margin-left: 5px;
-}
-
+/*查询*/
 .other{
     width: 1200px;
     min-height: 60px;
@@ -172,7 +181,7 @@
 .other>.checkIpt>.otherUl{
     width: 178px;height: auto;
     position: absolute;
-    top:31px;
+    top:32px;
     left:81px;
     z-index: 2;
     background: #FFFFFF;

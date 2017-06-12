@@ -129,6 +129,8 @@ section{
 .listSecDel:hover{
     background: #E6F0FB;
 }
+/*将默认的select选择框样式清除*/
+.listSecDel select::-ms-expand{ display: none }
 .listSecDel select{
     min-width: 58px;height: 22px;
     background: #FFFFFF;
@@ -136,6 +138,13 @@ section{
     font-size: 12px;
     color: #646464;
     padding-left: 8px;
+
+    /*将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+
     background:url("../res/header/slideDown.png") left center no-repeat;margin-bottom:0;
     background-position-x: 40px;
     -ms-background-position-x: 40px;

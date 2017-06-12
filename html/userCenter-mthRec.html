@@ -377,10 +377,10 @@
                             itemStyle : {
                                 normal : {
                                     label : {
-                                        show : false
+                                        show : true
                                     },
                                     labelLine : {
-                                        show : false
+                                        show : true
                                     }
                                 },
                                 emphasis : {
@@ -409,6 +409,16 @@
                 };
                 // 为echarts对象加载数据
                 myChart.setOption(option);
+                $.ajax({
+                    type: 'POST',
+                    url: '',  //ajax请求的url链接
+                    dataType: 'json', //数据格式
+                    success: function (json) {
+                        if (json.code == 1) {
+                            myChart.setOption(option);//当ajax获取数据成功，加载画图方法
+                        }
+                    }
+                });
             }
         );
     </script>

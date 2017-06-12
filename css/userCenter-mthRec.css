@@ -77,3 +77,15 @@
 .listUl>li>.right>a{
     color: #1c53b2;
 }
+
+/*上方图表*/
+#main{
+    position: relative;
+}
+#main>span{
+    width: 120px;line-height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    top:10px;
+}

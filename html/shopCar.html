@@ -249,7 +249,7 @@
         </div>
 
         <div class="shopListFoot">
-            <div id="shopDel">
+            <div id="shopDel" onclick="javascript:history.go(-1)">
                 <img src="../res/smIcon/delete.png" alt=""><span>放弃订单</span>
             </div>
             <div id="shopGo">
@@ -320,12 +320,12 @@
                 });
             });
 
-            $('#shopGo').on('click',function () {
-                location.href = 'orderSuc.html';
-            });
-
             $('.listSecLi').find('ul>li:last>span:last').on('click',function () {
                 $(this).parents('.listSecLi').remove();
+            });
+
+            $('#shopGo').on('click',function () {
+                location.href = 'orderSuc.html';
             });
         });
     </script>

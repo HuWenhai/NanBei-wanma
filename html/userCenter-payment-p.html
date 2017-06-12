@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
     <link rel="stylesheet" href="../css/userCenter-payment.css">
+    <link rel="stylesheet" href="../css/uploadPay.css">
     <!--[if lt IE 9]>
     <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
@@ -111,7 +112,7 @@
                             <img src="../res/payment/001.png" alt=""><img src="../res/payment/001.png" alt="">
                         </li>
                         <li>
-                            <a href="userCenter-uploadPay.html">查看详情</a>
+                            <a href="javascript:void (0)">查看详情</a>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +131,7 @@
                             <img src="../res/payment/001.png" alt=""><img src="../res/payment/001.png" alt="">
                         </li>
                         <li>
-                            <a href="userCenter-uploadPay.html">查看详情</a>
+                            <a href="javascript:void (0)">查看详情</a>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +150,7 @@
                             <img src="../res/payment/001.png" alt=""><img src="../res/payment/001.png" alt="">
                         </li>
                         <li>
-                            <a href="userCenter-uploadPay.html">查看详情</a>
+                            <a href="javascript:void (0)">查看详情</a>
                         </li>
                     </ul>
                 </div>
@@ -168,7 +169,7 @@
                             <img src="../res/payment/001.png" alt=""><img src="../res/payment/001.png" alt="">
                         </li>
                         <li>
-                            <a href="userCenter-uploadPay.html">查看详情</a>
+                            <a href="javascript:void (0)">查看详情</a>
                         </li>
                     </ul>
                 </div>
@@ -188,6 +189,92 @@
 
                     <button>确定</button>
                 </div>
+            </div>
+        </div>
+
+        <!--付款凭证-->
+        <div class="rightSec-2" style="display: none">
+            <!--<div class="nav">-->
+                <!--<img src="../res/smIcon/payment-warn.png" alt="">-->
+                <!--<span>请填写、上传您的付款凭证</span>-->
+            <!--</div>-->
+
+            <div class="payP">
+                <table border="1">
+                    <tr>
+                        <td style="width: 100px">付款单号</td>
+                        <td>1234567890</td>
+                    </tr>
+                    <tr>
+                        <td>付款日期</td>
+                        <td>
+                            <input type="text" class="uploadTime" id="Text1" onClick="calendar.show({ id: this })"
+                                   style="border: 1px solid #DDDDDD;width: 121px;padding-bottom: 5px;border-radius: 3px;
+                            padding-top: 5px;padding-left: 10px;color: #333333;" value="2017-06-01" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>付款单位</td>
+                        <td style="width: 320px">
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 300px;padding-bottom: 5px;
+                            padding-top: 5px;padding-left: 10px;color: #333333;" value="北京南北天地科技股份有限公司" readonly>
+                        </td>
+                        <!--只有在输入错误时才显示,wrong.这里根据表格特性使用visibility隐藏，占位作用-->
+                        <td class="wrong">
+                            <img src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32;display: inline-block;margin-left: 10px">输入信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>收款单位</td>
+                        <td>
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 300px;padding-bottom: 5px;
+                            padding-top: 5px;padding-left: 10px;color: #333333;" value="北京南北天地科技股份有限公司" readonly>
+                        </td>
+                        <td class="wrong">
+                            <img src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32;display: inline-block;margin-left: 10px">输入信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>付款方银行账号</td>
+                        <td>
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 300px;padding-bottom: 5px;
+                            padding-top: 5px;padding-left: 10px;color: #333333;" value="12345678978987789" readonly>
+                        </td>
+                        <td class="wrong">
+                            <img src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32;display: inline-block;margin-left: 10px">输入信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>付款方银行</td>
+                        <td>
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 300px;padding-bottom: 5px;
+                            padding-top: 5px;padding-left: 10px;color: #333333;" value="中国公司银行（杭州文三支行）" readonly>
+                        </td>
+                        <td class="wrong">
+                            <img src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32;display: inline-block;margin-left: 10px">输入信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top">上传图片</td>
+                        <td class="pl">
+                            <img src="../res/payment/001.png" alt="">
+                        </td>
+                    </tr>
+                    <tr style="color: #999999">
+                        <td>制单人</td>
+                        <td>老李</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" id="subBtn">确定</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
@@ -212,13 +299,16 @@
             });
 
             $('.listUl').find('a').on('click',function () {
-                $.ajax({
-                    url:'userCenter-uploadPay.html',
-                    type:'get',
-                    dataType: "script",
-                    success:function () {
-                        $('.rightSec-2').find('input').attr('readOnly','readOnly');
-                    }
+                $('.rightSec').hide();
+                $('.rightSec-2').show().find('input').css({
+                    border:'1px solid transparent',
+                    padding:'0',
+                    background:'none'
+                });
+
+                $('#subBtn').on('click',function () {
+                    $('.rightSec').show();
+                    $('.rightSec-2').hide()
                 });
             });
         });
