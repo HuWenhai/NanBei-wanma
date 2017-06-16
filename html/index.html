@@ -430,8 +430,6 @@
             //多选效果
             $('.moreBtn').on('click',function () {
                 var img = $(this).siblings('ul').find('img');
-                var arr = [];
-                //var sub = $(this).siblings('.btnSel').find('.sub');
                 img.show();
                 $(this).siblings('.btnSel').show();
 
@@ -446,17 +444,10 @@
                         $('<li>' +
                             '<input type="text" value="" class="add-input" readonly>' +
                             '</li>').appendTo(arr).find('input').val(self_text);
-                        //console.log(arr);
                     }else{
                         img.attr('src','../res/login/remb-none.png');
                     }
                 });
-//                sub.on('click',function () {
-//                    var ul = $('.allClassify').find('ul');
-//                    for (var i = 0; i <= arr.length; i ++){
-//                        arr[i].appendTo(ul);
-//                    }
-//                });
                 $('.allClassify').find('li').on('click',function () {
                     $(this).remove();
                 });
