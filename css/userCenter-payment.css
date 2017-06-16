@@ -70,7 +70,7 @@
     cursor: pointer;
 }
 .billItem>.listUl>li>img:first-child{ margin-left: 0}
-.billItem>.listUl>li:last-child{float: right}
+.billItem>.listUl>li:last-child{float: right;margin-right: 40px}
 .billItem>.listUl>li>a{
     font-size: 12px;
     color: #01358F;

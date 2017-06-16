@@ -10,8 +10,9 @@
     margin: 0px auto;
 }
 .conditionSel>div{
-    min-height: 40px;
-    /*border-bottom: 1px dashed #e4e4e4;*/
+    width: 100%;
+    min-height: 40px;line-height: 48px;
+    border-bottom: 1px solid #e4e4e4;
     overflow: hidden;
 }
 .conditionSel>div>button{
@@ -68,16 +69,6 @@
 .conditionSel>div>ul>li>span{
     margin-left: 5px;
 }
-.allClassify,.place{
-    width: 100%;
-    min-height: 40px;line-height: 48px;
-    border-bottom: 1px solid #e4e4e4;
-}
-.brand,.shiYong{
-    width: 100%;
-    min-height: 40px;line-height: 48px;
-    border-bottom: 1px dashed #e4e4e4;
-}
 /*提交和取消按钮*/
 .btnSel{
     width: 136px;height: auto;
@@ -116,18 +107,23 @@
 .allClassify>ul>li input{
     width: auto;
     padding: 5px;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url("../res/smIcon/close.png") right center no-repeat;
-    background-position-x: 120px;
+    /*background: url("../res/smIcon/close.png") right center no-repeat;*/
+    /*background-position-x: 120px;*/
     border: 1px solid transparent;
     cursor: pointer;
+}
+.allClassify>ul>li input:nth-child(1){
+    width: 40px;
+}
+.allClassify>ul>li input.add-input{
+    width: auto;
+    padding-left: 5px;
 }
 .allClassify input:hover{
     color: #DD1E32;
     border: 1px solid #DD1E32;
+    background: url("../res/smIcon/close-r.png") right center no-repeat;
+    background-position-x: 120px;
 }
 .allClassify>#search-g{
     width: auto;
@@ -138,9 +134,7 @@
 }
 
 /*产地*/
-.conditionSel>.place>ul>li>img{
-    display: inline-block;
-}
+
 /*查询*/
 .other{
     width: 1200px;
@@ -171,10 +165,6 @@
     margin-left: 20px;
     padding-left: 10px;
 
-    /*将默认的select选择框样式清除*/
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     background: url("../res/header/slideDown.png") right center no-repeat;
     background-position-x: 160px;
 }

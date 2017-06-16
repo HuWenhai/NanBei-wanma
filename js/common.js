@@ -43,6 +43,9 @@
             case  '购物车':
                 location.href = 'shopCar.html';
                 break;
+            case  '我的关注':
+                location.href = 'userCenter-myConcern.html';
+                break;
             case  '我的订单':
                 location.href = 'userCenter-myOrder.html';
                 break;
@@ -57,6 +60,9 @@
                 break;
             case '我的发票':
                 location.href = 'userCenter-myInvoice.html';
+                break;
+            case '业务对账':
+                location.href = 'userCenter-yewuRec.html';
                 break;
             case '财务对账':
                 location.href = 'userCenter-mthRec.html';

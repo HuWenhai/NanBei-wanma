@@ -179,7 +179,7 @@
         </div>
     </section>
 
-    <!--附件-->
+    <!--图片详情-->
     <div class="fixed">
 
         <div class="box">
@@ -195,6 +195,47 @@
             </div>
         </div>
 
+    </div>
+
+    <!--上传图片-->
+    <div class="fixed-2">
+        <div class="upload-img">
+            <div class="close">
+                <span>附件上传</span><span id="closeY">×</span>
+            </div>
+            <div class="upload">
+                <button class="img-sel">
+                    选择图片上传
+                </button>
+                <span>文件大小不得超过1M</span>
+            </div>
+            <ul>
+                <li class="upLoaded">
+                    <div class="img">
+                        <img src="../res/payment/001.png" alt="">
+                    </div>
+                    <span class="close-sp">×</span><span class="uploadSuc">上传完成</span>
+                </li>
+                <li class="upLoaded">
+                    <div class="img">
+                        <img src="../res/payment/001.png" alt="">
+                    </div>
+                    <span class="close-sp">×</span><span class="uploadSuc">上传完成</span>
+                </li>
+                <li class="upLoading">
+                    <div class="img">
+                        <img src="../res/payment/001.png" alt="">
+                    </div>
+                    <div class="img-bg"></div>
+                    <span class="upLoadIng"><span></span></span>
+                </li>
+            </ul>
+            <div class="btn">
+                <button id="btn-sub" type="submit">提 交</button>
+                <button id="btn-cel">取 消</button>
+            </div>
+
+        </div>
     </div>
 
     <footer>
@@ -220,6 +261,17 @@
                 event.stopPropagation();
                 $('html,body').on('click',function () {
                     $('#_calendar').hide();
+                });
+            });
+
+            var uploadBtn = $('#uploadImg');
+            uploadBtn.on('click',function () {
+                $('.fixed-2').show();
+                $('#btn-cel,#closeY').on('click',function () {
+                    $('.fixed-2').hide();
+                });
+                $('.close-sp').on('click',function () {
+                    $(this).parent().remove();
                 });
             });
         });

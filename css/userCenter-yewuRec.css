@@ -1,0 +1,21 @@
+.listUl>li{
+    height: auto;
+}
+.listUl>li:nth-child(1),
+.listUl>li:nth-child(2){
+    line-height: 36px;
+    background: #E5EAF4;
+    margin-bottom: 10px;
+}
+.listUl>li:nth-child(2){
+    margin-top: -10px;
+}
+.listUl>li:nth-child(2)>span{
+    font-weight: bold;
+}
+.listUl>li:nth-child(2)>.left>span{
+    font-weight: bold;
+}
+.listUl>li:nth-child(2)>.right>span{
+    font-weight: bold;
+}

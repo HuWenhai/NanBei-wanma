@@ -1,0 +1,136 @@
+body{
+    background: #ffffff;
+}
+.nav{
+    width: 1200px;height: 82px;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+}
+.nav>#q{
+    line-height: 60px;
+    float: left;
+    cursor: default;
+}
+.nav>#goBack{
+    line-height: 60px;
+    float: right;
+}
+.nav>#search{
+    float: right;
+    position: absolute;
+    top:54px;
+    right:0;
+}
+.nav span,
+.nav a{
+    font-size: 14px;
+    color: #323232;
+}
+.nav>#search>input{
+    width: 132px;
+    padding-bottom: 5px;padding-top: 5px;padding-left: 10px;
+    background: #FFFFFF;
+    float: left;
+    border: 1px solid #E6E6E6;
+    color: #969696;
+}
+.nav>#search>button{
+    width: 28px;height: 28px;
+    background: #FAFAFA;
+    border: 1px solid #E6E6E6;
+    border-left: none;
+}
+
+#top{
+    width: 1200px;height: auto;
+    padding: 10px 30px;
+    background: #FAFAFA;
+    overflow: hidden;
+    margin-top: 12px;
+}
+#top>ul{
+    width: 100%;height: 100%;
+}
+#top>ul>li{
+    width: 80px;line-height: 30px;
+    float: left;
+    margin-right: 50px;
+    cursor: pointer;
+    color: #5B698F;
+}
+#top>ul>li:hover{
+    color: #F77656;
+}
+
+#bottom{
+    width: 1200px;height: auto;
+    overflow: hidden;
+}
+#bottom>ul{
+    width: 100%;height: 100%;
+    overflow: hidden;position: relative;
+}
+#bottom>ul>li{
+    width: 120px;height: 210px;
+    float: left;margin-right: 30px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+#bottom>ul>li>.img{
+    width: 120px;height: 120px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+#bottom>ul>li>.img>.ddl{
+    width: 120px;height: 120px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    display: none;
+}
+#bottom>ul>li>.img>.ddl>.del{
+    width: 18px;height: 18px;
+    float: right;
+    /*background: url("../res/smIcon/del-fav.png") center right no-repeat;*/
+    background: rgba(15,25,54,0.50);
+    cursor: pointer;
+}
+#bottom>ul>li>.img>.ddl>.del>img{
+    max-width: 100%;
+}
+#bottom>ul>li>.img>.ddl>.del:hover{
+    /*background: url("../res/smIcon/del-huaguo.png") center right no-repeat;*/
+}
+#bottom>ul>li>.img>.ddl>.j{
+    width: 72px;line-height: 24px;
+    background: rgba(59,85,163,0.80);
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    top:94px;
+    cursor: pointer;
+}
+#bottom>ul>li>.img>img{
+    width: 120px;height: 120px;
+}
+
+#bottom>ul>li>.sp{
+    width: 100%;
+    padding: 10px;
+}
+#bottom>ul>li>.sp>p{
+    font-size: 12px;
+    color: #0F1936;font-weight: bold;
+}
+#bottom>ul>li>.sp>.jiage{
+    font-size: 14px;
+    color: #F77656;
+}
+
+.sBtn{
+    float: right;
+    margin-top: 30px;
+}

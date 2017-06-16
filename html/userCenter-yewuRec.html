@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>用户中心-业务对账</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/hd_nav_ft-common.css">
+    <link rel="stylesheet" href="../css/userCenter-mthRec.css">
+    <link rel="stylesheet" href="../css/userCenter-yewuRec.css">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="hd">
+            <img src="../res/header/logo.png" alt="" width="338" height="38">
+            <div class="search">
+                <input type="text">
+                <button>搜索</button>
+            </div>
+            <button class="shopCar">
+                <img src="../res/header/shop-icon.png" alt="" width="14" height="14">
+                <span>购物车</span>
+            </button>
+            <div class="perName">
+                <div>
+                    <div class="manage">
+                        <span>万马金控集团供应链...</span><img src="../res/header/slideDown.png" alt="">
+                    </div>
+                    <ul>
+                        <li>账号管理</li>
+                        <li>退出</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="banner">
+
+    </nav>
+
+    <!--用户头像-->
+    <section id="hdImg">
+        <div class="headImage">
+            <div class="img">
+                <img src="../res/navLeft/hdImg.png" alt="">
+            </div>
+            <div class="imgSh">
+                <span>欢迎您， <label for="">张小军</label></span><br>
+                <span style="width: 168px">万马金控集团供应链管理有限...</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!--列表导航-->
+        <div class="leftNav">
+            <div class="nav-sec">
+                <span class="nav-tit active" style="border: none">用户首页</span>
+            </div>
+            <div class="nav-sec">
+                <span class="nav-tit">订单管理</span>
+                <ul>
+                    <li><img src="../res/navLeft/shopIcon.png" alt=""><span>购物车</span></li>
+                    <li><img src="../res/navLeft/myFocus.png" alt=""><span>我的关注</span></li>
+                    <li><img src="../res/navLeft/myOrder.png" alt=""><span>我的订单</span></li>
+                    <li><img src="../res/navLeft/myBill.png" alt=""><span>我的提单</span></li>
+                </ul>
+            </div>
+            <div class="nav-sec">
+                <span class="nav-tit">财务中心</span>
+                <ul>
+                    <li><img src="../res/navLeft/payment-p.png" alt=""><span>付款凭证</span></li>
+                    <li><img src="../res/navLeft/payment-y.png" alt=""><span>付款确认</span></li>
+                    <li><img src="../res/navLeft/myInvoice.png" alt=""><span>我的发票</span></li>
+                    <li class="dis"><img src="../res/navLeft/mthRecon.png" alt=""><span>月度对账</span></li>
+                    <li class="active"><span style="margin-left: 34px">业务对账</span></li>
+                    <li><span style="margin-left: 34px">财务对账</span></li>
+                </ul>
+            </div>
+            <div class="nav-sec">
+                <span class="nav-tit">个人中心</span>
+                <ul>
+                    <li><img src="../res/navLeft/newsList.png" alt=""><span>消息列表</span></li>
+                    <li><img src="../res/navLeft/password-change.png" alt=""><span>修改密码</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rightSec">
+            <div class="rec">
+                <div class="rightTit">
+                    <span>业务对账</span>
+                </div>
+
+                <!--上方图表-->
+                <div class="topPho">
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="main" style="width: 100%;height:350px"></div>
+                </div>
+
+                <!--订单号搜索-->
+                <div class="listSearch">
+                    <div class="left">
+                        <span>月累计订单金额：</span><span>￥</span><label for="">200000.00</label>
+                    </div>
+                    <div class="right">
+                        <input type="text"><button>搜索</button>
+                    </div>
+                </div>
+
+                <!--订单列表-->
+                <div class="bottomList">
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>下单日期：</span><label for="">2016-12-31</label>
+                            </div>
+                            <div class="right">
+                                <span>已提金额：￥</span><label for="">2000.00</label>
+                                <span>未提金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>订单信息</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>提单编号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>提单日期：</span><label for="" style="margin-right: 300px">2017-05-31</label>
+                                <span>提单人：</span><label for="">张三 2321321032300 1310002546 浙A 48555</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>提单商品：</span><label for="">雅士利奶粉</label>
+                            </div>
+                            <div class="right">
+                                <span>数量：</span><label for="">100件</label>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="listUl">
+                        <li>
+                            <div class="left">
+                                <span>订单编号：</span><label for="">123123131232131</label>
+                            </div>
+                            <div class="right">
+                                <span>订单金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>下单日期：</span><label for="">2016-12-31</label>
+                            </div>
+                            <div class="right">
+                                <span>已提金额：￥</span><label for="">2000.00</label>
+                                <span>未提金额：￥</span><label for="">2000.00</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>订单信息</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>提单编号：</span><label for="">1231293173</label>
+                            </div>
+                            <div class="right">
+                                <span>提单日期：</span><label for="" style="margin-right: 300px">2017-05-31</label>
+                                <span>提单人：</span><label for="">张三 2321321032300 1310002546 浙A 48555</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>提单商品：</span><label for="">雅士利奶粉</label>
+                            </div>
+                            <div class="right">
+                                <span>数量：</span><label for="">100件</label>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!--页数跳转-->
+                <div class="sBtn">
+                    <button id="btnRel" >上一页</button>
+                    <button class="btnSel btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <span>···</span>
+                    <button id="btnAdd">下一页</button>
+
+                    <span>共 100 页，到第</span>
+                    <input type="text" value="2">
+                    <span>页</span>
+
+                    <button>确定</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ft">
+            增值电信业务经营许可证： 浙B2-202382137946 网络文化经营许可证：浙网文[2015]0295-021313号 12318举报
+            互联网药品信息服务资质证书编号：浙-（经营性）-2017-0005 浙公网安备 3301002131302000120号 <br>
+            © 2003-2017 xxxxxxxx 版权所有
+        </div>
+    </footer>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/pie.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sBtn').find('.btn').on('click',function () {
+                $(this).addClass('btnSel').siblings().removeClass('btnSel');
+            });
+        });
+
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie' // 使用圆环图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+
+                var option = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b}"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['未开发票','已开发票']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {
+                                show: true,
+                                type: ['pie'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'center',
+                                        max: 1548
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'财务对账',
+                            type:'pie',
+                            radius : ['50%', '70%'],//此地的50%和70%为环形大小
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        show : true
+                                    },
+                                    labelLine : {
+                                        show : true
+                                    }
+                                },
+                                emphasis : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        textStyle : {
+                                            fontSize : '30',
+                                            fontWeight : 'bold'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[
+                                {value:1200, name:'未开发票',
+                                    itemStyle:{
+                                        normal:{color:'#D99982'}
+                                    }},
+                                {value:1000, name:'已开发票',
+                                    itemStyle:{
+                                        normal:{color:'#9DCEB8'}
+                                    }}
+                            ]
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+                $.ajax({
+                    type: 'POST',
+                    url: '',  //ajax请求的url链接
+                    dataType: 'json', //数据格式
+                    success: function (json) {
+                        if (json.code == 1) {
+                            myChart.setOption(option);//当ajax获取数据成功，加载画图方法
+                        }
+                    }
+                });
+            }
+        );
+    </script>
+</body>
+</html>

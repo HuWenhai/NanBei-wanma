@@ -114,48 +114,22 @@
             </div>
 
             <!--产地-->
-            <div class="place selectLi" style="height: auto">
+            <div class="place selectLi">
                 <span>产地：</span>
                 <ul class="placeCountry">
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>中国大陆</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>中国香港</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>中国澳门</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>日本</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>法国</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>荷兰</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>美国</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>澳大利亚</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>新西兰</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>加拿大</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>俄罗斯</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>韩国</span>
-                    </li>
-                    <li>
-                        <img src="../res/login/remb-none.png" alt=""><span>印度</span>
-                    </li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>中国大陆</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>中国香港</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>中国澳门</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>日本</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>法国</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>荷兰</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>美国</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>澳大利亚</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>新西兰</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>加拿大</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>俄罗斯</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>韩国</span></li>
+                    <li><img src="../res/login/remb-none.png" alt=""><span>印度</span></li>
                 </ul>
 
                 <button class="more">
@@ -165,7 +139,7 @@
 
                 <div style="width: 0px;height: 0px;clear: both"></div>
 
-                <div class="btnSel" style="display: block">
+                <div class="btnSel">
                     <button class="sub">提交</button>
                     <button class="can">取消</button>
                 </div>
@@ -437,28 +411,56 @@
     <script>
         $(document).ready(function () {
             //条件选择
-            var cun = true;
+            //单选效果及条件筛选
+
             $('.selectLi').find('li').on('click',function () {
                 var self_text = $(this).text();
                 var all_cla = $('.allClassify').find('ul');
-                cun;
-                $('<li>' +
-                    '<input type="text" value="" readonly>' +
-                    '</li>').appendTo(all_cla).find('input').val(self_text);
+                var item = $(this).find('img');
+                var css = item.css('display');
+                if (css == 'none'){
+                    $('<li>' +
+                        '<input type="text" value="" class="add-input" readonly>' +
+                        '</li>').appendTo(all_cla).find('input').val(self_text);
+                }
                 $('.allClassify').find('li').on('click',function () {
                     $(this).remove();
                 });
             });
-
-            //
+            //多选效果
             $('.moreBtn').on('click',function () {
-                cun = false;
                 var img = $(this).siblings('ul').find('img');
+                var arr = [];
+                //var sub = $(this).siblings('.btnSel').find('.sub');
                 img.show();
                 $(this).siblings('.btnSel').show();
-                $('.selectLi').find('li').on('click',function () {
-                    return false
+
+                $('.conditionSel').find('ul>li').on('click',function () {
+                    var img = $(this).find('img');
+                    var span = img.siblings('span');
+                    var self_text = span.text();
+                    var src = img.attr('src');
+
+                    if (src == '../res/login/remb-none.png'){
+                        img.attr('src','../res/login/remb-ok.png');
+                        $('<li>' +
+                            '<input type="text" value="" class="add-input" readonly>' +
+                            '</li>').appendTo(arr).find('input').val(self_text);
+                        //console.log(arr);
+                    }else{
+                        img.attr('src','../res/login/remb-none.png');
+                    }
                 });
+//                sub.on('click',function () {
+//                    var ul = $('.allClassify').find('ul');
+//                    for (var i = 0; i <= arr.length; i ++){
+//                        arr[i].appendTo(ul);
+//                    }
+//                });
+                $('.allClassify').find('li').on('click',function () {
+                    $(this).remove();
+                });
+
             });
             $('.btnSel').find('.can').on('click',function () {
                 $(this).parent().hide();
@@ -490,15 +492,7 @@
                     });
                 }
             });
-            $('.conditionSel').find('ul>li').on('click',function () {
-                var img = $(this).find('img');
-                var src = img.attr('src');
-                if (src == '../res/login/remb-none.png'){
-                    img.attr('src','../res/login/remb-ok.png');
-                }else{
-                    img.attr('src','../res/login/remb-none.png');
-                }
-            });
+
 
             //奶粉种类筛选设置
             $('.otherIpt').on('click',function (e) {
@@ -523,7 +517,8 @@
                     ul.hide();
                 });
             });
-            function stopEvent(event){ //阻止冒泡事件
+            function stopEvent(event){
+                //阻止冒泡事件
                 //取消事件冒泡
                 var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
                 if (e && e.stopPropagation) {
@@ -544,11 +539,7 @@
                 var src = img.attr('src');
                 var span = $(this).find('span');
 
-                if (src == '../res/smIcon/addrDown.png'){
-                    img.attr('src','../res/smIcon/addrUp.png');
-                }else{
-                    img.attr('src','../res/smIcon/addrDown.png');
-                }
+                img.attr('src','../res/smIcon/addrUp.png');
 
                 list.find('li').on('click',function () {
                     var _text = $(this).text();
@@ -557,10 +548,11 @@
                     });
                     $(this).parent().hide();
                 });
-            },
-            function () {
+            }, function () {
                 var list = $(this).find('#list-4');
+                var img = $(this).find('img');
                 list.hide();
+                img.attr('src','../res/smIcon/addrDown.png');
             });
 
             //商品加入和移除购物车

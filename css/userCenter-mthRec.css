@@ -48,8 +48,9 @@
 
 /*订单列表*/
 .listUl{
-    height: 114px;
+    min-height: 114px;
     margin-top: 20px;
+    padding-bottom: 10px;
 }
 .listUl>li{
     width: 100%;
@@ -70,9 +71,15 @@
     width: auto;
     float: left;
 }
+.listUl>li:nth-child(1)>.left>span{
+    font-weight: bold;
+}
 .listUl>li>.right{
     width: auto;
     float: right;
+}
+.listUl>li:nth-child(1)>.right>span{
+    font-weight: bold;
 }
 .listUl>li>.right>a{
     color: #1c53b2;

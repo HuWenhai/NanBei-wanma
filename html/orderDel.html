@@ -45,6 +45,7 @@
         <span>请确认您的订单，确认无误后再点击确认下单，进行下一步操作。</span>
     </nav>
 
+    <!--订单详情-->
     <section class="payment">
         <div class="secTit">
             <span>订单详情</span>
@@ -67,13 +68,14 @@
         </table>
     </section>
 
+    <!--订单信息-->
     <section class="msg">
         <div class="secTit">
             <span>收货信息</span>
             <div></div>
         </div>
-        <table style="color: #0F1936;">
-            <tr>
+        <table id="p" style="color: #0F1936;">
+            <tr style="height: 40px">
                 <td style="line-height: 24px;">
                     <span>收货人姓名</span>
                     <input type="text" style="width: 150px;
@@ -88,17 +90,17 @@
                 </td>
                 <td>
                     <span>收货人地址</span>
-                    <input type="text" style="width: 150px;
+                    <input type="text" style="width: 320px;
                         padding-bottom: 6px;padding-top: 6px;
                         border: 1px solid #3B55A3;">
                 </td>
-                <td>
+                <td style="width: 150px">
                     <button>
                         <img src="../res/smIcon/payment-rev.png" alt=""><span>修改</span>
                     </button>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 40px">
                 <td style="line-height: 24px;">
                     <span>收货人姓名</span>
                     <input type="text" style="width: 150px;
@@ -113,7 +115,7 @@
                 </td>
                 <td>
                     <span>收货人地址</span>
-                    <input type="text" style="width: 150px;
+                    <input type="text" style="width: 320px;
                         padding-bottom: 6px;padding-top: 6px;
                         border: 1px solid #3B55A3;">
                 </td>
@@ -121,10 +123,11 @@
                     <button>
                         <img src="../res/smIcon/payment-rev.png" alt=""><span>修改</span>
                     </button>
-                    <button>
-                        <img src="../res/smIcon/payment-add.png" alt=""><span>添加</span>
-                    </button>
                 </td>
+
+                <button id="td-add" style="position: absolute;bottom: 38px;right: 40px">
+                    <img src="../res/smIcon/payment-add.png" alt=""><span>添加</span>
+                </button>
             </tr>
         </table>
     </section>
@@ -413,6 +416,31 @@
 
             $('.listSecLi').find('ul>li:last>span:last').on('click',function () {
                 $(this).parents('.listSecLi').remove();
+            });
+
+            //添加收货信息
+            $('#td-add').on('click',function () {
+                $('<tr style="height: 40px">' +
+                        '<td style="line-height: 24px">' +
+                            '<span style="margin-right: 4px">收货人姓名</span>' +
+                            '<input style="width: 150px;padding: 6px 10px;border: 1px solid #3B55A3">' +
+                        '</td>' +
+                        '<td>' +
+                            '<span style="margin-right: 4px">收货人联系方式</span>' +
+                            '<input style="width: 150px;padding: 6px 10px;border: 1px solid #3B55A3">' +
+                        '</td>' +
+                        '<td>' +
+                            '<span style="margin-right: 4px">收货人地址</span>' +
+                            '<input style="width: 320px;padding: 6px 10px;border: 1px solid #3B55A3">' +
+                        '</td>' +
+                        '<td>' +
+                            '<button>' +
+                                '<img src="../res/smIcon/payment-rev.png" alt="">' +
+                                '<span>修改</span>' +
+                            '</button>' +
+                        '</td>'+
+                    '</tr>'
+                ).appendTo("#p");
             });
         });
     </script>

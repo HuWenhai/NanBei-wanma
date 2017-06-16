@@ -45,6 +45,7 @@
         <span>请确认您的订单，确认无误后再点击确认下单，进行下一步操作。</span>
     </nav>
 
+    <!--提货详情-->
     <section class="payment">
         <div class="secTit">
             <span>提单详情</span>
@@ -53,78 +54,91 @@
         <table style="font-size: 12px;">
             <tr>
                 <td style="line-height: 24px;"><span>订单编号：</span><label for="">231313131313</label></td>
-                <td><span>下单日期：3</span><label for="">2017-02-1</label></td>
-                <td><span>下单客户：</span><label for="">北京南北天地科技股份有限公司</label></td>
+                <td><span>税号：3</span><label for="">TD165984365461</label></td>
+                <td><span>开单日期：</span><label for="">2017-06-12</label></td>
             </tr>
             <tr>
-                <td style="line-height: 24px"><span>提货方式：</span><label for="">送货上门</label></td>
-                <td><span>支付方式：</span><label for="">款到发货</label></td>
-                <td><span>预计交货日期：</span><label for="">2017-4-20</label></td>
+                <td style="line-height: 24px"><span>购货单位：</span><label for="">浙江特岗公司</label></td>
+                <td><span>开户银行：</span><label for="">工商银行</label></td>
+                <td><span>银行账号：</span><label for="">021226120222222222</label></td>
             </tr>
             <tr>
-                <td style="line-height: 24px"><span>成交金额：￥</span><label for="">2321323.00</label></td>
+                <td style="line-height: 24px"><span>提货期限：￥</span><label for="">2017-06-15</label></td>
+                <td><span>提货单号：</span><label for="">TD54564654654646</label></td>
+                <td><span>提货仓库：</span><label for="">杭州市下城区111号</label></td>
+            </tr>
+            <tr>
+                <td style="line-height: 24px"><span>联系人：</span><label for="">李云龙</label></td>
+                <td><span>电话：</span><label for="">0571-1111111111</label></td>
+                <td><span>手机：</span><label for="">131000000555</label></td>
+            </tr>
+            <tr>
+                <td style="line-height: 24px"><span>地址：</span><label for="">上海市徐汇区1000号</label></td>
+                <td colspan="2">仓库地址：<span></span><label for="">嘉兴市南湖区666号</label></td>
             </tr>
         </table>
     </section>
 
+    <!--提货信息-->
     <section class="msg">
         <div class="secTit">
             <span>提货信息</span>
             <div></div>
         </div>
-        <table style="color: #0F1936;">
-            <tr>
+        <table id="p" style="color: #0F1936;">
+            <tr style="height: 40px">
                 <td style="line-height: 24px;">
                     <span>收货人姓名</span>
                     <input type="text" style="width: 150px;
-                            padding-bottom: 6px;padding-top: 6px;
-                            border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;
+                        border: 1px solid #3B55A3;">
                 </td>
                 <td>
                     <span>收货人联系方式</span>
                     <input type="text" style="width: 150px;
-                            padding-bottom: 6px;padding-top: 6px;
-                            border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;
+                        border: 1px solid #3B55A3;">
                 </td>
                 <td>
                     <span>收货人地址</span>
-                    <input type="text" style="width: 150px;
-                            padding-bottom: 6px;padding-top: 6px;
-                            border: 1px solid #3B55A3;">
+                    <input type="text" style="width: 320px;
+                        padding-bottom: 6px;padding-top: 6px;
+                        border: 1px solid #3B55A3;">
                 </td>
-                <td>
+                <td style="width: 150px">
                     <button>
                         <img src="../res/smIcon/payment-rev.png" alt=""><span>修改</span>
                     </button>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 40px">
                 <td style="line-height: 24px;">
                     <span>收货人姓名</span>
                     <input type="text" style="width: 150px;
-                            padding-bottom: 6px;padding-top: 6px;
-                            border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;
+                        border: 1px solid #3B55A3;">
                 </td>
                 <td>
                     <span>收货人联系方式</span>
                     <input type="text" style="width: 150px;
-                            padding-bottom: 6px;padding-top: 6px;
-                            border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;
+                        border: 1px solid #3B55A3;">
                 </td>
                 <td>
                     <span>收货人地址</span>
-                    <input type="text" style="width: 150px;
-                            padding-bottom: 6px;padding-top: 6px;
-                            border: 1px solid #3B55A3;">
+                    <input type="text" style="width: 320px;
+                        padding-bottom: 6px;padding-top: 6px;
+                        border: 1px solid #3B55A3;">
                 </td>
                 <td>
                     <button>
                         <img src="../res/smIcon/payment-rev.png" alt=""><span>修改</span>
                     </button>
-                    <button>
-                        <img src="../res/smIcon/payment-add.png" alt=""><span>添加</span>
-                    </button>
                 </td>
+
+                <button id="td-add" style="position: absolute;bottom: 38px;right: 40px">
+                    <img src="../res/smIcon/payment-add.png" alt=""><span>添加</span>
+                </button>
             </tr>
         </table>
     </section>
@@ -413,6 +427,31 @@
 
             $('.listSecLi').find('ul>li:last>span:last').on('click',function () {
                 $(this).parents('.listSecLi').remove();
+            });
+
+            //添加收货信息
+            $('#td-add').on('click',function () {
+                $('<tr style="height: 40px">' +
+                    '<td style="line-height: 24px">' +
+                    '<span style="margin-right: 4px">收货人姓名</span>' +
+                    '<input style="width: 150px;padding: 6px 10px;border: 1px solid #3B55A3">' +
+                    '</td>' +
+                    '<td>' +
+                    '<span style="margin-right: 4px">收货人联系方式</span>' +
+                    '<input style="width: 150px;padding: 6px 10px;border: 1px solid #3B55A3">' +
+                    '</td>' +
+                    '<td>' +
+                    '<span style="margin-right: 4px">收货人地址</span>' +
+                    '<input style="width: 320px;padding: 6px 10px;border: 1px solid #3B55A3">' +
+                    '</td>' +
+                    '<td>' +
+                    '<button>' +
+                    '<img src="../res/smIcon/payment-rev.png" alt="">' +
+                    '<span>修改</span>' +
+                    '</button>' +
+                    '</td>'+
+                    '</tr>'
+                ).appendTo("#p");
             });
         });
     </script>
