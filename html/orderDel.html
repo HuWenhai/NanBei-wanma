@@ -74,64 +74,36 @@
             <span>收货信息</span>
             <div></div>
         </div>
-        <table id="p" style="color: #0F1936;">
-            <tr style="height: 40px">
-                <td style="line-height: 24px;">
+        <table style="color: #0F1936;">
+            <tr>
+                <td>
                     <span>收货人姓名</span>
                     <input type="text" style="width: 150px;
-                        padding-bottom: 6px;padding-top: 6px;
-                        border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;padding-left:10px;margin-left: 5px;
+                        border: 1px solid #3B55A3;" value="111" readonly>
                 </td>
                 <td>
                     <span>收货人联系方式</span>
                     <input type="text" style="width: 150px;
-                        padding-bottom: 6px;padding-top: 6px;
-                        border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;padding-left:10px;margin-left: 5px;
+                        border: 1px solid #3B55A3;" value="13100000555" readonly>
                 </td>
                 <td>
                     <span>收货人地址</span>
                     <input type="text" style="width: 320px;
-                        padding-bottom: 6px;padding-top: 6px;
-                        border: 1px solid #3B55A3;">
+                        padding-bottom: 6px;padding-top: 6px;padding-left:10px;margin-left: 5px;
+                        border: 1px solid #3B55A3;" value="杭州市下城区111号" readonly>
                 </td>
                 <td style="width: 150px">
-                    <button>
-                        <img src="../res/smIcon/payment-rev.png" alt=""><span>修改</span>
+                    <button id="change">
+                        <img src="../res/smIcon/payment-rev.png" alt=""><span style="margin-left: 6px">修改</span>
                     </button>
                 </td>
-            </tr>
-            <tr style="height: 40px">
-                <td style="line-height: 24px;">
-                    <span>收货人姓名</span>
-                    <input type="text" style="width: 150px;
-                        padding-bottom: 6px;padding-top: 6px;
-                        border: 1px solid #3B55A3;">
-                </td>
-                <td>
-                    <span>收货人联系方式</span>
-                    <input type="text" style="width: 150px;
-                        padding-bottom: 6px;padding-top: 6px;
-                        border: 1px solid #3B55A3;">
-                </td>
-                <td>
-                    <span>收货人地址</span>
-                    <input type="text" style="width: 320px;
-                        padding-bottom: 6px;padding-top: 6px;
-                        border: 1px solid #3B55A3;">
-                </td>
-                <td>
-                    <button>
-                        <img src="../res/smIcon/payment-rev.png" alt=""><span>修改</span>
-                    </button>
-                </td>
-
-                <button id="td-add" style="position: absolute;bottom: 38px;right: 40px">
-                    <img src="../res/smIcon/payment-add.png" alt=""><span>添加</span>
-                </button>
             </tr>
         </table>
     </section>
 
+    <!--商品详情-->
     <section>
         <div class="secTit">
             <span>
@@ -350,6 +322,85 @@
         </div>
     </section>
 
+    <!--新增收货信息-->
+    <div class="fixed">
+        <div class="box">
+            <div class="box-tit">
+                <span>选择收货人记录</span>
+                <span id="close">×</span>
+            </div>
+            <table class="tab-1">
+                <thead>
+                <tr>
+                    <td style="width: 150px">收货人姓名</td>
+                    <td style="width: 200px">联系方式</td>
+                    <td>地址</td>
+                    <td id="tabAdd" style="cursor: pointer">
+                        <img src="../res/smIcon/payment-add.png" style="position: relative;top: 1px;" alt=""><span>新增</span>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>小王</td>
+                    <td>15561616161</td>
+                    <td>浙江省杭州市下城区体育场路105号凯喜雅大厦</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>小王</td>
+                    <td>15561616161</td>
+                    <td>浙江省杭州市下城区体育场路105号凯喜雅大厦</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>小王</td>
+                    <td>15561616161</td>
+                    <td>浙江省杭州市下城区体育场路105号凯喜雅大厦</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>小王</td>
+                    <td>15561616161</td>
+                    <td>浙江省杭州市下城区体育场路105号凯喜雅大厦</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>小王</td>
+                    <td>15561616161</td>
+                    <td>浙江省杭州市下城区体育场路105号凯喜雅大厦</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>小王</td>
+                    <td>15561616161</td>
+                    <td>浙江省杭州市下城区体育场路105号凯喜雅大厦</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="tab-2">
+                <thead>
+                <tr>
+                    <td style="width: 150px">收货人姓名</td>
+                    <td style="width: 200px">联系方式</td>
+                    <td>地址</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" value="1" style="width: 120px"></td>
+                    <td><input type="text" value="2" style="width: 160px"></td>
+                    <td><input type="text" value="3" style="width: 320px"></td>
+                </tr>
+                </tbody>
+            </table>
+            <button id="btnSub">提 交</button>
+            <button id="btnCon">取 消</button>
+        </div>
+    </div>
+
     <footer>
         <div class="ft">
             增值电信业务经营许可证： 浙B2-202382137946 网络文化经营许可证：浙网文[2015]0295-021313号 12318举报
@@ -414,33 +465,33 @@
                 location.href = 'orderSuc.html';
             });
 
-            $('.listSecLi').find('ul>li:last>span:last').on('click',function () {
-                $(this).parents('.listSecLi').remove();
+            //修改和新增收货信息
+            var changeBtn = $('.msg').find('table #change');
+            changeBtn.on('click',function () {
+                $('.fixed').show();
+                $('.fixed').find('.tab-1').show();
+                $('.fixed').find('.tab-2').hide();
+                $('#tabAdd').on('click',function () {
+                    $('.fixed').find('.tab-1').hide();
+                    $('.fixed').find('.tab-2').show();
+                });
+            });
+            $('.fixed').find('#btnCon,#close').on('click',function () {
+                $('.fixed').hide();
             });
 
-            //添加收货信息
-            $('#td-add').on('click',function () {
-                $('<tr style="height: 40px">' +
-                        '<td style="line-height: 24px">' +
-                            '<span style="margin-right: 4px">收货人姓名</span>' +
-                            '<input style="width: 150px;padding: 6px 10px;border: 1px solid #3B55A3">' +
-                        '</td>' +
-                        '<td>' +
-                            '<span style="margin-right: 4px">收货人联系方式</span>' +
-                            '<input style="width: 150px;padding: 6px 10px;border: 1px solid #3B55A3">' +
-                        '</td>' +
-                        '<td>' +
-                            '<span style="margin-right: 4px">收货人地址</span>' +
-                            '<input style="width: 320px;padding: 6px 10px;border: 1px solid #3B55A3">' +
-                        '</td>' +
-                        '<td>' +
-                            '<button>' +
-                                '<img src="../res/smIcon/payment-rev.png" alt="">' +
-                                '<span>修改</span>' +
-                            '</button>' +
-                        '</td>'+
-                    '</tr>'
-                ).appendTo("#p");
+            //商品删除效果
+            $('.listSecLi').find('ul>li:last>span:last').on('click',function () {
+                var ele = $(this).parents('.listSecLi');
+                var pla = ele.parents('.listSec');
+                var elv = ele.parents('.listSec').find('.listSecLi');
+                var num = elv.length;
+                ele.remove();
+                num -= 1;
+
+                if (num== 0){
+                    pla.remove();
+                }
             });
         });
     </script>

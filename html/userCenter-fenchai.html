@@ -104,30 +104,40 @@
                 </div>
 
                 <table>
-                    <tr>
+                    <tr style="height: 36px">
                         <td>收款登记号</td>
                         <td>123456789999</td>
                     </tr>
-                    <tr>
+                    <tr style="height: 30px">
                         <td>收款账号</td>
                         <td colspan="3">中国工商银行（杭州西湖支行） 1234567989797</td>
                     </tr>
                     <tr>
                         <td>收款方式</td>
-                        <td style="width: 120px">
-                            <input style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                        <td colspan="2">
+                            <input style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" type="text" value="电汇">
                         </td>
-                        <td style="padding-left: 10px">到账日期</td>
-                        <td style="width: 120px">
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>到账日期</td>
+                        <td colspan="2" style="width: 380px">
                             <input type="text" class="uploadTime" id="Text1" onClick="calendar.show({ id: this })"
-                                   style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                                   style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="2017-05-12">
+                        </td>
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
                         </td>
                     </tr>
                     <tr>
                         <td>来款客户</td>
-                        <td colspan="3">
+                        <td colspan="2">
                             <input type="text" style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="北京南北天地科技股份有限公司">
                         </td>
@@ -138,42 +148,69 @@
                     </tr>
                     <tr>
                         <td>币种</td>
-                        <td>
-                            <input type="text" style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                        <td colspan="2">
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="人民币">
                         </td>
-                        <td style="padding-left: 10px">对人民币汇率</td>
-                        <td>
-                            <input type="text" style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>对人民币汇率</td>
+                        <td colspan="2">
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="1.00">
                         </td>
-                        <td></td>
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
+                        </td>
                     </tr>
                     <tr>
                         <td>原币金额</td>
-                        <td>
-                            <input type="text" style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                        <td colspan="2">
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="11111.00">
                         </td>
-                        <td style="padding-left: 10px">人民币金额</td>
-                        <td>
-                            <input type="text" style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>人民币金额</td>
+                        <td colspan="2">
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="131321.00">
+                        </td>
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="width: 90px">内行消费人民币</td>
-                        <td>
-                            <input type="text" style="border: 1px solid #DDDDDD;width: 120px;padding-bottom: 5px;
+                        <td colspan="2">
+                            <input type="text" style="border: 1px solid #DDDDDD;width: 380px;padding-bottom: 5px;
                             padding-top: 5px;padding-left: 10px;color: #333333;" value="12315464">
+                        </td>
+                        <td style="padding-left: 10px">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="vertical-align: top">备注</td>
                         <td colspan="2">
-                            <textarea name="" id="" cols="40" rows="5" style="border: 1px solid #DDDDDD;text-align: left">
+                            <textarea name="" id="" cols="60" rows="5" style="border: 1px solid #DDDDDD;text-align: left">
                                 111111111111
                             </textarea>
+                        </td>
+                        <td style="padding-left: 10px;vertical-align: middle">
+                            <img style="position: relative;top: 2px;" src="../res/smIcon/wrong.png" alt="">
+                            <span style="color: #DD1E32">付款信息错误</span>
                         </td>
                     </tr>
                 </table>

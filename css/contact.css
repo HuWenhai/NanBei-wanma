@@ -101,6 +101,19 @@
     border-radius: 3px;
 
     color: #1b53b2;
+    position: relative;
+}
+#email-dom>.fixed>table #upfile{
+    width: 100%;height: 30px;
+    position: absolute;
+    top:0;
+    right:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background: red;
+    opacity: 0;
 }
 #email-dom>.fixed>table button{
     width: 120px;height: 40px;

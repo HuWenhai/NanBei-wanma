@@ -321,7 +321,16 @@
             });
 
             $('.listSecLi').find('ul>li:last>span:last').on('click',function () {
-                $(this).parents('.listSecLi').remove();
+                var ele = $(this).parents('.listSecLi');
+                var pla = ele.parents('.listSec');
+                var elv = ele.parents('.listSec').find('.listSecLi');
+                var num = elv.length;
+                ele.remove();
+                num -= 1;
+
+                if (num== 0){
+                    pla.remove();
+                }
             });
 
             $('#shopGo').on('click',function () {

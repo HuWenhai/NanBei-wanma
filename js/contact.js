@@ -102,9 +102,6 @@
         $('#Tel').remove();
     });
 
-    //QQ，微信，电话联系方式框小三角样式设置
-    $('#qq,#weChat,#Tel').append('<div id="sanjiao"></div>');
-
     //Email联系方式
     $('.imgCon').find('img').on('click',function () {
         var src = $(this).attr('src');
@@ -135,7 +132,7 @@
                 '</div>');
             $('.fixed').append('<table>' +
                 '<tr>' +
-                '<td style="width: 60px">发送人：</td>' +
+                '<td style="width: 60px;height: 30px">发送人：</td>' +
                 '<td>风清扬</td>' +
                 '</tr>' +
                 '<tr>' +
@@ -147,11 +144,11 @@
                 '<tr>' +
                 '<td>添加附件：</td>' +
                 '<td>' +
-                '<button id="uploadBtn"><img src="../res/smIcon/uploadFile.png" alt="">上传文件</button>' +
+                '<button id="uploadBtn"><img src="../res/smIcon/uploadFile.png" alt="">上传文件<input type="file" id="upfile"></button>' +
                 '</td>' +
                 '</tr>' +
                 '<tr>' +
-                '<td>内容：</td>' +
+                '<td style="vertical-align: top">内容：</td>' +
                 '<td>' +
                 '<textarea>111</textarea>' +
                 '</td>' +
@@ -167,6 +164,22 @@
 
             $('#close').on('click',function () {
                 $('#email-dom').remove();
+            });
+            //文件上传
+            $('#uploadBtn').on('click', function() {
+                var fd = new FormData();
+                fd.append("upload", 1);
+                fd.append("upfile", $("#upfile").get(0).files[0]);
+                $.ajax({
+                    url: "test.php",
+                    type: "POST",
+                    processData: false,
+                    contentType: false,
+                    data: fd,
+                    success: function(d) {
+                        console.log(d);
+                    }
+                });
             });
         }
     });

@@ -44,13 +44,13 @@
     float: right;
 }
 .info>table{
-    height: 400px;
+    height: 500px;
     margin-top: 56px;margin-left: 10px;
 }
 
 .uploadTime{
     background: url("../res/header/slideDown.png") right center no-repeat;
-    background-position-x: 100px;
+    background-position-x: 360px;
 }
 
 .fen{

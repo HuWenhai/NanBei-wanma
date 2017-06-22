@@ -51,6 +51,9 @@
                 </ul>
                 <div id="search-g">
                     <span>共</span><label for="">1</label><span>款相关产品</span>
+                    <button class="clear">
+                        <span>清除筛选</span>
+                    </button>
                 </div>
             </div>
 
@@ -412,17 +415,18 @@
         $(document).ready(function () {
             //条件选择
             //单选效果及条件筛选
-
             $('.selectLi').find('li').on('click',function () {
                 var self_text = $(this).text();
                 var all_cla = $('.allClassify').find('ul');
-                var item = $(this).find('img');
-                var css = item.css('display');
-                if (css == 'none'){
+                var has_text = all_cla.find('input').val();
+                if (has_text != self_text){
                     $('<li>' +
                         '<input type="text" value="" class="add-input" readonly>' +
                         '</li>').appendTo(all_cla).find('input').val(self_text);
+                }else{
+
                 }
+
                 $('.allClassify').find('li').on('click',function () {
                     $(this).remove();
                 });
@@ -432,30 +436,29 @@
                 var img = $(this).siblings('ul').find('img');
                 img.show();
                 $(this).siblings('.btnSel').show();
-
-                $('.conditionSel').find('ul>li').on('click',function () {
-                    var img = $(this).find('img');
-                    var span = img.siblings('span');
-                    var self_text = span.text();
-                    var src = img.attr('src');
-
-                    if (src == '../res/login/remb-none.png'){
-                        img.attr('src','../res/login/remb-ok.png');
-                        $('<li>' +
-                            '<input type="text" value="" class="add-input" readonly>' +
-                            '</li>').appendTo(arr).find('input').val(self_text);
-                    }else{
-                        img.attr('src','../res/login/remb-none.png');
-                    }
-                });
                 $('.allClassify').find('li').on('click',function () {
                     $(this).remove();
                 });
-
             });
             $('.btnSel').find('.can').on('click',function () {
                 $(this).parent().hide();
                 $(this).parent().siblings('ul').find('img').hide();
+            });
+
+            $('.conditionSel').find('ul>li').on('click',function () {
+                var img = $(this).find('img');
+                var span = img.siblings('span');
+                var self_text = span.text();
+                var src = img.attr('src');
+
+                if (src == '../res/login/remb-none.png'){
+                    img.attr('src','../res/login/remb-ok.png');
+                    $('<li>' +
+                        '<input type="text" value="" class="add-input" readonly>' +
+                        '</li>').appendTo().find('input').val(self_text);
+                }else{
+                    img.attr('src','../res/login/remb-none.png');
+                }
             });
 
             //条件筛选
@@ -484,6 +487,10 @@
                 }
             });
 
+            //清除筛选
+            $('button.clear').on('click',function () {
+                $('.allClassify').find('li').hide();
+            });
 
             //奶粉种类筛选设置
             $('.otherIpt').on('click',function (e) {
@@ -521,6 +528,17 @@
                 }
             }
 
+            //综合排序
+            $('.secNav').find('li:nth-child(2),li:nth-child(3)').on('click',function () {
+                var list = $(this);
+                var img = $(this).find('img');
+                var src = img.attr('src');
+                if (src == '../res/smIcon/ascend.png'){
+                    img.attr('src','../res/smIcon/descend.png');
+                }else{
+                    img.attr('src','../res/smIcon/ascend.png');
+                }
+            });
             //发货地效果
             $('.secNav').find('li:nth-child(4)').hover(function () {
                 var list = $(this).find('#list-4');
