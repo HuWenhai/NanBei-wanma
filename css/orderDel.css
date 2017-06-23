@@ -97,6 +97,7 @@ section #p td input{
     font-size: 14px;
 }
 .fixed>.box>table>thead td{
+    height: 40px;
     font-weight: bold;
 }
 .fixed>.box>table tbody td{
@@ -117,7 +118,8 @@ section #p td input{
     font-weight: bold;
 }
 .fixed>.box button{
-    width: 100px;height: 30px;
+    width: 100px;
+    padding-bottom: 8px;padding-top: 8px;
     display: inline-table;
     margin-top: 70px;
 }

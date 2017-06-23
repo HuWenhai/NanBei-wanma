@@ -144,7 +144,7 @@
                 '<tr>' +
                 '<td>添加附件：</td>' +
                 '<td>' +
-                '<button id="uploadBtn"><img src="../res/smIcon/uploadFile.png" alt="">上传文件<input type="file" id="upfile"></button>' +
+                '<div id="uploadBtn"><img src="../res/smIcon/uploadFile.png" alt="">上传文件<input type="file" id="upfile" data-url="" unselectable="on"></div>' +
                 '</td>' +
                 '</tr>' +
                 '<tr>' +
@@ -171,16 +171,18 @@
                 fd.append("upload", 1);
                 fd.append("upfile", $("#upfile").get(0).files[0]);
                 $.ajax({
-                    url: "test.php",
+                    url: "",
                     type: "POST",
                     processData: false,
                     contentType: false,
-                    data: fd,
+                    async: false,
+                    cache: false,
                     success: function(d) {
-                        console.log(d);
+                        //console.log(d);
                     }
                 });
             });
+
         }
     });
 

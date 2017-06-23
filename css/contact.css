@@ -35,7 +35,7 @@
     width: 500px;height: 390px;
     background: #FFFFFF;
     margin: 10% auto;
-    padding: 30px 40px;
+    padding: 30px 20px 30px 40px;
 }
 #email-dom>.fixed>#email-tit{
     width: 100%;height: 14px;
@@ -92,7 +92,8 @@
     border-radius: 3px;
 }
 #email-dom>.fixed>table #uploadBtn{
-    width: 100px;height: 30px;
+    display: inline-block;
+    width: 100px;line-height: 30px;
     border:1px solid #1b53b2;
     text-align: center;
     background: #E6F0FB;
@@ -104,7 +105,8 @@
     position: relative;
 }
 #email-dom>.fixed>table #upfile{
-    width: 100%;height: 30px;
+    display: block;
+    width: 100%;height: 100%;
     position: absolute;
     top:0;
     right:0;
@@ -112,9 +114,13 @@
     -moz-appearance: none;
     appearance: none;
 
-    background: red;
+    /*background: red;*/
     opacity: 0;
+    /*z-index: 2;*/
+    cursor: pointer;
+    border:none;
 }
+#email-dom>.fixed>table #upfile:focus {noFocusLine: expression(this.onFocus=this.blur());}
 #email-dom>.fixed>table button{
     width: 120px;height: 40px;
     background: #1b53b2;

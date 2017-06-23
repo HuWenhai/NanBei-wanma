@@ -46,7 +46,7 @@
                 <span>所有分类：</span>
                 <ul>
                     <li>
-                        <input type="text" value="全部" readonly>
+                        <input id="li-1" type="text" value="全部" readonly>
                     </li>
                 </ul>
                 <div id="search-g">
@@ -415,22 +415,40 @@
         $(document).ready(function () {
             //条件选择
             //单选效果及条件筛选
+            var all_cla = $('.allClassify').find('ul');
+
             $('.selectLi').find('li').on('click',function () {
                 var self_text = $(this).text();
-                var all_cla = $('.allClassify').find('ul');
                 var has_text = all_cla.find('input').val();
+                all_cla.find('#li-1').hide();
                 if (has_text != self_text){
-                    $('<li>' +
+                    $('<li class="add-li">' +
                         '<input type="text" value="" class="add-input" readonly>' +
                         '</li>').appendTo(all_cla).find('input').val(self_text);
                 }else{
 
                 }
 
-                $('.allClassify').find('li').on('click',function () {
+                var add_li = all_cla.find('li.add-li');
+                add_li.on('click',function () {
                     $(this).remove();
+                    var num = add_li.length;
+                    if (num == 0){
+                        all_cla.find('#li-1').show();
+                    }
                 });
             });
+            setInterval(function () {
+                var add_li = all_cla.find('li.add-li');
+                var num = add_li.length;
+                console.log(num);
+                if (num == 0){
+                    all_cla.find('#li-1').show();
+                }else{
+                    all_cla.find('#li-1').hide();
+                }
+            },100);
+
             //多选效果
             $('.moreBtn').on('click',function () {
                 var img = $(this).siblings('ul').find('img');
@@ -453,7 +471,7 @@
 
                 if (src == '../res/login/remb-none.png'){
                     img.attr('src','../res/login/remb-ok.png');
-                    $('<li>' +
+                    $('<li class="add-li">' +
                         '<input type="text" value="" class="add-input" readonly>' +
                         '</li>').appendTo().find('input').val(self_text);
                 }else{
@@ -489,7 +507,8 @@
 
             //清除筛选
             $('button.clear').on('click',function () {
-                $('.allClassify').find('li').hide();
+                $('.allClassify').find('li.add-li').remove();
+                all_cla.find('#li-1').show();
             });
 
             //奶粉种类筛选设置
